@@ -17,14 +17,13 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   knowledgeIndex,
 }) => {
   const elementRef = useRef(null);
-  const [progress, setProgress] = useState(10);
+  const [progress, setProgress] = useState(1);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          const randomDelay =
-            Math.floor(Math.random() * (800 - 200 + 1)) + 200;
+          const randomDelay = Math.floor(Math.random() * (800 - 200 + 1)) + 200;
           const timer = setTimeout(() => {
             setProgress(pkg.value);
           }, randomDelay);
@@ -47,11 +46,11 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   return (
     <div
       ref={elementRef}
-      className="min-h-32 m-auto text-center text-xl pt-4"
+      className="min-h-16 m-auto text-center text-xl pt-2 text-white"
       key={knowledgeIndex}
     >
       {pkg.title}
-      <Progress className={`w-2/3 m-auto`} value={progress}></Progress>
+      <Progress className={`w-5/6 m-auto bg-white`} value={progress}></Progress>
       {progress}%
     </div>
   );

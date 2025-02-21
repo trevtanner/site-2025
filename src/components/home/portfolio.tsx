@@ -6,11 +6,13 @@ import tamaImage from "@/public/TamaSquareLogo.jpg";
 import pokeball from "@/public/pokeball.jpg";
 import weather from "@/public/weather.jpg";
 import ttblog from "@/public/ttblog-project.jpg";
+import { useRouter } from "next/navigation";
 
 export const Portfolio: React.FC = () => {
+  const router = useRouter();
   return (
-    <div className="bg-primary py-6">
-      <h1 className="text-center text-5xl underline pb-4">Previous Projects</h1>
+    <div className="bg-gray-600 pt-8 pb-16">
+      <h1 className="text-center text-5xl underline pb-8 text-white">Previous Projects</h1>
       <div className="grid grid-cols-2 lg:grid-cols-4 lg:w-3/4 w-1/2 m-auto">
         <div className="relative group cursor-pointer">
           <Image
@@ -24,7 +26,10 @@ export const Portfolio: React.FC = () => {
             </span>
           </div>
         </div>
-        <div className="relative group cursor-pointer">
+        <div
+          className="relative group cursor-pointer"
+          onClick={() => router.push(`https://www.tamalax.com/`)}
+        >
           <Image
             src={tamaImage}
             alt="image of Tama Lacrosse Logo"
@@ -36,7 +41,10 @@ export const Portfolio: React.FC = () => {
             </span>
           </div>
         </div>
-        <div className="relative group cursor-pointer">
+        <div
+          className="relative group cursor-pointer"
+          onClick={() => router.push(`/pokedex`)}
+        >
           <Image
             src={pokeball}
             alt="image of a pokeball"

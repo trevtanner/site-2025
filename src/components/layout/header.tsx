@@ -1,10 +1,7 @@
 "use client";
 
-import * as React from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-
-import { cn } from "@/lib/utils";
-import { Icons } from "@/components/icons";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,41 +13,54 @@ import {
 } from "@/components/ui/navigation-menu";
 
 export function Header() {
+  const pathname = usePathname();
   return (
-    <NavigationMenu className="flex items-center justify-between w-full px-8 py-2 !max-w-full fixed bg-gray-400">
+    <NavigationMenu className="flex items-center justify-between w-full px-8 py-4 !max-w-full fixed bg-gray-800">
       <div className="w-15">
         <img src="TTlogoBlkBG50.jpg" alt="Logo" />
       </div>
-      <NavigationMenuList className="!flex-none">
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Home
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              About
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Portfolio
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Resume
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
+      {pathname.startsWith("/pokedex") ? (
+        <NavigationMenuList className="!flex-none">
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className="hover:underline text-white p-2">
+                EXIT
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      ) : (
+        <NavigationMenuList className="!flex-none">
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className="hover:underline text-white p-2">
+                HOME
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className="hover:underline text-white p-2">
+                ABOUT
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className="hover:underline text-white p-2">
+                PORTFOLIO
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className="hover:underline text-white p-2">
+                RESUME
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      )}
     </NavigationMenu>
   );
 }

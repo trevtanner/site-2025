@@ -6,14 +6,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const About: React.FC = () => {
   return (
-    <div className="bg-secondary py-6">
+    <div className="bg-secondary py-16">
       <h1 className="text-center text-5xl underline">About Me</h1>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="grid m-auto text-center text-2xl">
           <Avatar className="m-auto w-32 h-32">
             <AvatarImage
               src="https://trevtanner.github.io/my-site/static/media/headshot.1647446acfd9fd3f0235.jpg"
-              alt="@shadcn"
+              alt="Trevor Tanner Headshot"
             />
             <AvatarFallback>TT</AvatarFallback>
           </Avatar>
