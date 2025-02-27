@@ -12,7 +12,9 @@ export const Portfolio: React.FC = () => {
   const router = useRouter();
   return (
     <div className="bg-gray-600 pt-8 pb-16">
-      <h1 className="text-center text-5xl underline pb-8 text-white">Previous Projects</h1>
+      <h1 className="text-center text-5xl underline pb-16 text-white">
+        Previous Projects
+      </h1>
       <div className="grid grid-cols-2 lg:grid-cols-4 lg:w-3/4 w-1/2 m-auto">
         <div className="relative group cursor-pointer">
           <Image
@@ -21,7 +23,7 @@ export const Portfolio: React.FC = () => {
             className="w-full h-auto brightness-50 transition duration-300 ease-in-out"
           />
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-            <span className="text-white text-center text-md font-bold group-hover:border p-2 transition duration-300 ease-in-out">
+            <span className="text-center portfolio-text group-hover:border p-2 transition duration-300 ease-in-out">
               TT Web Development & Design
             </span>
           </div>
@@ -36,34 +38,43 @@ export const Portfolio: React.FC = () => {
             className="w-full h-auto brightness-50 transition duration-300 ease-in-out"
           />
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-            <span className="text-white text-center text-md font-bold group-hover:border p-2 transition duration-300 ease-in-out">
+            <span className="text-center portfolio-text group-hover:border p-2 transition duration-300 ease-in-out">
               Tama Lacrosse E-Com Site
             </span>
           </div>
         </div>
-        <div
-          className="relative group cursor-pointer"
-          onClick={() => router.push(`/pokedex`)}
-        >
+        <div className="relative group">
           <Image
             src={pokeball}
             alt="image of a pokeball"
             className="w-full h-auto brightness-50 transition duration-300 ease-in-out"
           />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-            <span className="text-white text-center text-md font-bold group-hover:border p-2 transition duration-300 ease-in-out">
+          <div className="absolute inset-0 grid grid-cols-1 gap-2 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+            <span className="text-center portfolio-text transition duration-300 ease-in-out underline">
               Trevor's Pokedex
+            </span>
+            <span
+              className="text-center portfolio-text cursor-pointer"
+              onClick={() => router.push(`/pokedex`)}
+            >
+              View
+            </span>
+            <span className="text-center portfolio-text cursor-pointer">
+              Breakdown
             </span>
           </div>
         </div>
-        <div className="relative group cursor-pointer">
+        <div
+          className="relative group cursor-pointer"
+          onClick={() => router.push(`/weatherApp`)}
+        >
           <Image
             src={weather}
             alt="image of clouds"
             className="w-full h-auto brightness-50 transition duration-300 ease-in-out"
           />
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-            <span className="text-white text-center text-md font-bold group-hover:border p-2 transition duration-300 ease-in-out">
+            <span className="text-center portfolio-text group-hover:border p-2 transition duration-300 ease-in-out">
               Weather App
             </span>
           </div>

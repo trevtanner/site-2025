@@ -15,10 +15,12 @@ export default async function Page({
   const pokedexData = await api.getPokemonSpeciesById(slug);
 
   return (
-    <PokedexEntry
-      slug={slug}
-      pokemonData={pokemonData}
-      pokedexData={pokedexData}
-    />
+    <div className="min-h-[75vh]">
+      <PokedexEntry
+        slug={slug}
+        pokemonData={pokemonData}
+        pokedexData={pokedexData}
+      />
+    </div>
   );
 }
