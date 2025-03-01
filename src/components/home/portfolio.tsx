@@ -22,24 +22,33 @@ export const Portfolio: React.FC = () => {
             alt="image of code"
             className="w-full h-auto brightness-50 transition duration-300 ease-in-out"
           />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-            <span className="text-center portfolio-text group-hover:border p-2 transition duration-300 ease-in-out">
+          <div className="absolute inset-0 grid grid-cols-1 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+            <span className="text-center portfolio-text transition duration-300 ease-in-out uppercase">
               TT Web Development & Design
+            </span>
+            <span className="text-center portfolio-text cursor-pointer hover:underline hover:opacity-100 opacity-75">
+              Technical Details
             </span>
           </div>
         </div>
-        <div
-          className="relative group cursor-pointer"
-          onClick={() => router.push(`https://www.tamalax.com/`)}
-        >
+        <div className="relative group">
           <Image
             src={tamaImage}
             alt="image of Tama Lacrosse Logo"
             className="w-full h-auto brightness-50 transition duration-300 ease-in-out"
           />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-            <span className="text-center portfolio-text group-hover:border p-2 transition duration-300 ease-in-out">
+          <div className="absolute inset-0 grid grid-cols-1 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+            <span className="text-center portfolio-text transition duration-300 ease-in-out uppercase">
               Tama Lacrosse E-Com Site
+            </span>
+            <span
+              className="text-center portfolio-text cursor-pointer hover:underline hover:opacity-100 opacity-75"
+              onClick={() => router.push(`https://www.tamalax.com/`)}
+            >
+              View
+            </span>
+            <span className="text-center portfolio-text cursor-pointer hover:underline hover:opacity-100 opacity-75">
+              Technical Details
             </span>
           </div>
         </div>
@@ -49,33 +58,39 @@ export const Portfolio: React.FC = () => {
             alt="image of a pokeball"
             className="w-full h-auto brightness-50 transition duration-300 ease-in-out"
           />
-          <div className="absolute inset-0 grid grid-cols-1 gap-2 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-            <span className="text-center portfolio-text transition duration-300 ease-in-out underline">
+          <div className="absolute inset-0 grid grid-cols-1 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+            <span className="text-center portfolio-text transition duration-300 ease-in-out uppercase">
               Trevor's Pokedex
             </span>
             <span
-              className="text-center portfolio-text cursor-pointer"
+              className="text-center portfolio-text cursor-pointer hover:underline hover:opacity-100 opacity-75"
               onClick={() => router.push(`/pokedex`)}
             >
               View
             </span>
-            <span className="text-center portfolio-text cursor-pointer">
-              Breakdown
+            <span className="text-center portfolio-text cursor-pointer hover:underline hover:opacity-100 opacity-75">
+              Technical Details
             </span>
           </div>
         </div>
-        <div
-          className="relative group cursor-pointer"
-          onClick={() => router.push(`/weatherApp`)}
-        >
+        <div className="relative group">
           <Image
             src={weather}
             alt="image of clouds"
             className="w-full h-auto brightness-50 transition duration-300 ease-in-out"
           />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
-            <span className="text-center portfolio-text group-hover:border p-2 transition duration-300 ease-in-out">
+          <div className="absolute inset-0 grid grid-cols-1 items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+            <span className="text-center portfolio-text transition duration-300 ease-in-out uppercase">
               Weather App
+            </span>
+            <span
+              className="text-center portfolio-text cursor-pointer hover:underline hover:opacity-100 opacity-75"
+              onClick={() => router.push(`/weatherApp`)}
+            >
+              View
+            </span>
+            <span className="text-center portfolio-text cursor-pointer hover:underline hover:opacity-100 opacity-75">
+              Technical Details
             </span>
           </div>
         </div>
