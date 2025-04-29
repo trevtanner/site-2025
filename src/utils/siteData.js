@@ -2,9 +2,11 @@ export const personalInfo = {
   name: "Trevor Tanner",
   location: "Orange County, CA",
   about1:
-    "Driven by a deep passion for programming, I immerse myself in coding projects both during professional hours and in my personal time. Whether I'm refining my computer building skills working on my desktop, or engaging in challenging video games, I approach each task with a commitment to excellence and continuous learning. My early career experience at Spectrum Cable provided a solid introduction to the dynamics of a large corporate environment, where I learned the importance of discipline, teamwork, and efficient problem-solving.",
+    "Driven by a deep passion for programming, I immerse myself in coding projects both during professional hours and in my personal time. My early career experience at a large telecom company provided a solid introduction to the dynamics of a sizeable corporate environment, where I learned the importance of discipline, teamwork, and efficient problem-solving.",
   about2:
-    "As a self-taught developer specializing in Next.js, I have supplemented my hands-on experience with formal computer programming courses and am actively pursuing a Bachelor's Degree in the field, which will be completed Spring of 2025. This blend of self-driven exploration and structured education has equipped me with a robust foundation and an innovative mindset. While I recognize that there is always more to learn, I view every challenge as an opportunity to enhance my expertise and deliver exceptional results for every project I undertake.",
+    "As a self-taught developer specializing in Next.js, I have supplemented my hands-on experience with formal computer programming courses and am actively pursuing a Bachelor's Degree in the field, which will be completed Spring of 2025. ",
+  about3:
+    "This blend of self-driven exploration and structured education has equipped me with a robust foundation and an innovative mindset. While I recognize that there is always more to learn, I view every challenge as an opportunity to enhance my expertise and deliver exceptional results for every project I undertake.",
 };
 
 export const topPackages = [
@@ -15,9 +17,9 @@ export const topPackages = [
     link: "https://nextjs.org/",
   },
   {
-    title: "Prisma - Backend",
+    title: "Prisma - Database ORM",
     about:
-      "Prisma is a next-generation ORM (Object-Relational Mapping) for Node.js and TypeScript that provides a powerful and type-safe database toolkit, allowing developers to focus on building scalable and efficient applications.",
+      "A next-generation ORM (Object-Relational Mapping) for Node.js and TypeScript that provides a powerful and type-safe database toolkit, allowing developers to focus on building scalable and efficient applications.",
     link: "https://www.prisma.io/",
   },
   {
@@ -25,6 +27,32 @@ export const topPackages = [
     about:
       "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
     link: "https://ui.shadcn.com/",
+  },
+];
+
+export const wdd = [
+  {
+    title: "Personalized Website Design",
+    about:
+      "Your website is tailored specifically to reflect your brand identity, clearly showcasing what makes your business unique, and immediately communicating your value to customers and clients.",
+  },
+  {
+    title: "Mobile-focused Performance",
+    about:
+      "Ensure your website provides a seamless, engaging experience across all devices—phones, tablets, and desktops—to capture every potential clients, wherever they browse.",
+  },
+];
+
+export const seo = [
+  {
+    title: "Keyword Research and Content Optimization",
+    about:
+      "Boost your website’s visibility by using optimized content, proper headings, mobile-friendly layouts, and strategic keywords, making it easy for customers to find you on Google.",
+  },
+  {
+    title: "Page Optimization",
+    about:
+      "Provide an intuitive, straightforward navigation system so visitors easily find information, products, or services, enhancing their overall satisfaction and experience.",
   },
 ];
 

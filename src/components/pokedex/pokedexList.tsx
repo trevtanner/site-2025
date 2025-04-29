@@ -62,16 +62,16 @@ export const PokedexList: React.FC<PokedexListProps> = ({
   const [selectedGen, setSelectedGen] = useState(gen1);
   const [selectedGenString, setSelectedGenString] = useState("gen1");
   return (
-    <div className="bg-secondary py-6">
+    <div className="bg-tertiary-100 py-6">
       <h1 className="text-center text-5xl underline">Pokedex</h1>
-      <div className="px-24 grid grid-cols-6 pt-4">
-        <div className="col-span-1 col-start-2">
-          <div className="fixed">
+      <div className="md:px-24 grid grid-cols-1 md:grid-cols-6 pt-4 m-auto">
+        <div className="col-span-1 md:col-start-2">
+          <div className="md:fixed">
             <Table>
               <TableBody>
                 <TableRow className="cursor-pointer">
                   <TableCell
-                    className={` text-center hover:text-gray-900 ${
+                    className={` text-center hover:bg-tertiary-300 ${
                       selectedGenString === "allGen"
                         ? "selected-pokedex-entry-text"
                         : "pokedex-entry-text text-gray-700"
@@ -91,7 +91,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
                 </TableRow>
                 <TableRow className="cursor-pointer">
                   <TableCell
-                    className={` text-center hover:text-gray-900 ${
+                    className={` text-center hover:bg-tertiary-300 ${
                       selectedGenString === "gen1"
                         ? "selected-pokedex-entry-text"
                         : "pokedex-entry-text text-gray-700"
@@ -111,7 +111,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
                 </TableRow>
                 <TableRow className="cursor-pointer">
                   <TableCell
-                    className={` text-center hover:text-gray-900 ${
+                    className={` text-center hover:bg-tertiary-300 ${
                       selectedGenString === "gen2"
                         ? "selected-pokedex-entry-text"
                         : "pokedex-entry-text text-gray-700"
@@ -131,7 +131,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
                 </TableRow>
                 <TableRow className="cursor-pointer">
                   <TableCell
-                    className={` text-center hover:text-gray-900 ${
+                    className={` text-center hover:bg-tertiary-300 ${
                       selectedGenString === "gen3"
                         ? "selected-pokedex-entry-text"
                         : "pokedex-entry-text text-gray-700"
@@ -151,7 +151,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
                 </TableRow>
                 <TableRow className="cursor-pointer">
                   <TableCell
-                    className={` text-center hover:text-gray-900 ${
+                    className={` text-center hover:bg-tertiary-300 ${
                       selectedGenString === "gen4"
                         ? "selected-pokedex-entry-text"
                         : "pokedex-entry-text text-gray-700"
@@ -171,7 +171,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
                 </TableRow>
                 <TableRow className="cursor-pointer">
                   <TableCell
-                    className={` text-center hover:text-gray-900 ${
+                    className={` text-center hover:bg-tertiary-300 ${
                       selectedGenString === "gen5"
                         ? "selected-pokedex-entry-text"
                         : "pokedex-entry-text text-gray-700"
@@ -191,7 +191,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
                 </TableRow>
                 <TableRow className="cursor-pointer">
                   <TableCell
-                    className={` text-center hover:text-gray-900 ${
+                    className={` text-center hover:bg-tertiary-300 ${
                       selectedGenString === "gen6"
                         ? "selected-pokedex-entry-text"
                         : "pokedex-entry-text text-gray-700"
@@ -211,7 +211,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
                 </TableRow>
                 <TableRow className="cursor-pointer">
                   <TableCell
-                    className={` text-center hover:text-gray-900 ${
+                    className={` text-center hover:bg-tertiary-300 ${
                       selectedGenString === "gen7"
                         ? "selected-pokedex-entry-text"
                         : "pokedex-entry-text text-gray-700"
@@ -231,7 +231,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
                 </TableRow>
                 <TableRow className="cursor-pointer">
                   <TableCell
-                    className={` text-center hover:text-gray-900 ${
+                    className={` text-center hover:bg-tertiary-300 ${
                       selectedGenString === "gen8"
                         ? "selected-pokedex-entry-text"
                         : "pokedex-entry-text text-gray-700"
@@ -251,7 +251,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
                 </TableRow>
                 <TableRow className="cursor-pointer">
                   <TableCell
-                    className={` text-center hover:text-gray-900 ${
+                    className={` text-center hover:bg-tertiary-300 ${
                       selectedGenString === "gen9"
                         ? "selected-pokedex-entry-text"
                         : "pokedex-entry-text text-gray-700"
@@ -273,7 +273,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
             </Table>
           </div>
         </div>
-        <div className="col-span-3">
+        <div className="md:col-span-4 m-auto md:w-full">
           <Table>
             <TableBody>
               {selectedGen.map((entry, index: number) => (

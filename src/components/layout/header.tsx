@@ -11,11 +11,12 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { Separator } from "@/components/ui/separator";
 
 export function Header() {
   const pathname = usePathname();
   return (
-    <NavigationMenu className="flex items-center justify-between w-full px-8 py-4 !max-w-full fixed bg-gray-800">
+    <NavigationMenu className="flex items-center justify-between px-8 py-4 bg-primary header">
       <div className="w-15 hover:cursor-pointer">
         <Link href="/" legacyBehavior passHref>
           <img src="TTlogoBlkBG50.jpg" alt="Logo" />
@@ -25,7 +26,7 @@ export function Header() {
         <NavigationMenuList className="!flex-none">
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className="hover:underline text-white p-2">
+              <NavigationMenuLink className="hover:underline text-tertiary-100 p-2">
                 EXIT
               </NavigationMenuLink>
             </Link>
@@ -35,7 +36,7 @@ export function Header() {
         <NavigationMenuList className="!flex-none">
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className="hover:underline text-white p-2">
+              <NavigationMenuLink className="hover:underline text-tertiary-100 p-2">
                 EXIT
               </NavigationMenuLink>
             </Link>
@@ -45,28 +46,28 @@ export function Header() {
         <NavigationMenuList className="!flex-none">
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className="hover:underline text-white p-2">
+              <NavigationMenuLink className="hover:underline text-tertiary-100 p-2">
                 HOME
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className="hover:underline text-white p-2">
+              <NavigationMenuLink className="hover:underline text-tertiary-100 p-2">
                 ABOUT
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className="hover:underline text-white p-2">
+              <NavigationMenuLink className="hover:underline text-tertiary-100 p-2">
                 PORTFOLIO
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className="hover:underline text-white p-2">
+              <NavigationMenuLink className="hover:underline text-tertiary-100 p-2">
                 RESUME
               </NavigationMenuLink>
             </Link>

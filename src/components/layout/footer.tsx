@@ -4,30 +4,84 @@ import { usePathname } from "next/navigation";
 import { FaBluesky, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { Icons } from "../icons";
 import Link from "next/link";
+import Image from "next/image";
+import ttLogo from "@/public/TT-logo-trans.png";
+import ttLogoWhite from "@/public/TTlogo.jpg";
+import ttwddLogo from "@/public/TTWDDLargeLogo.webp";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="bg-gray-800 text-white py-8">
-      <h1 className="text-center text-3xl">
-        Building great websites for all of your needs.
-      </h1>
-      <h2 className="text-center text-2xl italic">Let's get started today.</h2>
-      <div className="flex m-auto justify-center gap-2">
-        <FaGithub className="h-8 w-8 my-auto hover:text-gray-400" />
-        <FaBluesky className="h-8 w-8 my-auto hover:text-gray-400" />
-        <FaLinkedin className="h-8 w-8 my-auto hover:text-gray-400" />
+    <>
+      <div className="bg-primary text-tertiary-100 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div className="gap-x-4 md:col-span-3 pb-2 md:pb-0 mx-auto grid md:grid-cols-1 grid-cols-4 text-center md:text-left">
+            <div className="py-1">
+              <Link className="footer-link hover:text-secondary" href={"/"}>
+                About
+              </Link>
+            </div>
+            <div className="py-1">
+              <Link className="footer-link hover:text-secondary" href={"/"}>
+                Portfolio
+              </Link>
+            </div>
+            <div className="py-1">
+              <Link className="footer-link hover:text-secondary" href={"/"}>
+                Resume
+              </Link>
+            </div>
+            <div className="py-1">
+              <Link className="footer-link hover:text-secondary" href={"/"}>
+                Contact
+              </Link>
+            </div>
+          </div>
+          <div className="md:col-span-6 m-auto">
+            <h1 className="text-center footer-header">
+              Building great websites for all of your needs.
+            </h1>
+            <h2 className="text-center footer-sub-header">
+              Let's get started today.
+            </h2>
+            <p className="text-center footer-text">
+              Full stack developer using Next.js to build stunning single and
+              multi page apps.
+            </p>
+          </div>
+          <div className="text-center md:col-span-2 col-span-1">
+            <Link
+              href={"/"}
+              className="footer-text hover:text-secondary underline hover:no-underline"
+            >
+              contactus@trevorstanner.com
+            </Link>
+            <div className="flex m-auto justify-center md:justify-center gap-2 md:pt-6 pt-4">
+              <FaGithub className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
+              <FaBluesky className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
+              <FaLinkedin className="h-6 w-6 my-auto hover:text-secondary cursor-pointer " />
+            </div>
+          </div>
+        </div>
+        <Image
+          src={ttwddLogo}
+          alt="image of code"
+          className="mt-2 m-auto w-2/5 md:w-1/6 rounded-full opacity-70"
+        />
       </div>
-      <p className="text-center text-md">
-        Full stack developer using Next.js to build stunning single and multi
-        page apps.
-      </p>
-      <p className="text-center text-md">
-        Trevor Tanner © {currentYear} Copyright TT Web Development and Design
-        <Link href={"/"} className="pl-2 text-blue-400 hover:text-white">
-          PRIVACY POLICY
-        </Link>
-      </p>
-    </div>
+      <div className="py-4 bg-tertiary-100">
+        <p className="text-center text-md m-auto">
+          Trevor Tanner © {currentYear} Copyright TT Web Development and Design
+          |
+          <Link href={"/"} className="pl-2 hover:text-white">
+            Privacy Policy
+          </Link>{" "}
+          |
+          <Link href={"/"} className="pl-2 hover:text-white">
+            Accessibility
+          </Link>
+        </p>
+      </div>
+    </>
   );
 }

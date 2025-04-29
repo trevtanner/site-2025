@@ -53,126 +53,174 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
   function fixType(type: string, index: number) {
     if (type === "normal") {
       return (
-        <Badge className="bg-gray-700 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-gray-700 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Normal
         </Badge>
       );
     }
     if (type === "fire") {
       return (
-        <Badge className="bg-red-700 pokedex-entry rounded-full" key={index}>
+        <Badge className="bg-red-700 pokedex-entry md:rounded-full" key={index}>
           Fire
         </Badge>
       );
     }
     if (type === "fighting") {
       return (
-        <Badge className="bg-orange-400 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-orange-400 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Fighting
         </Badge>
       );
     }
     if (type === "water") {
       return (
-        <Badge className="bg-blue-700 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-blue-700 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Water
         </Badge>
       );
     }
     if (type === "flying") {
       return (
-        <Badge className="bg-blue-400 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-blue-400 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Flying
         </Badge>
       );
     }
     if (type === "grass") {
       return (
-        <Badge className="bg-green-700 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-green-700 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Grass
         </Badge>
       );
     }
     if (type === "poison") {
       return (
-        <Badge className="bg-purple-700 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-purple-700 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Poison
         </Badge>
       );
     }
     if (type === "electric") {
       return (
-        <Badge className="bg-yellow-500 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-yellow-500 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Electric
         </Badge>
       );
     }
     if (type === "ground") {
       return (
-        <Badge className="bg-amber-800 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-amber-800 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Ground
         </Badge>
       );
     }
     if (type === "psychic") {
       return (
-        <Badge className="bg-pink-700 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-pink-700 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Psychic
         </Badge>
       );
     }
     if (type === "rock") {
       return (
-        <Badge className="bg-amber-500 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-amber-500 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Rock
         </Badge>
       );
     }
     if (type === "ice") {
       return (
-        <Badge className="bg-sky-400 pokedex-entry rounded-full" key={index}>
+        <Badge className="bg-sky-400 pokedex-entry md:rounded-full" key={index}>
           Ice
         </Badge>
       );
     }
     if (type === "bug") {
       return (
-        <Badge className="bg-lime-700 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-lime-700 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Bug
         </Badge>
       );
     }
     if (type === "dragon") {
       return (
-        <Badge className="bg-blue-600 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-blue-600 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Dragon
         </Badge>
       );
     }
     if (type === "ghost") {
       return (
-        <Badge className="bg-indigo-700 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-indigo-700 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Ghost
         </Badge>
       );
     }
     if (type === "dark") {
       return (
-        <Badge className="bg-zinc-700 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-zinc-700 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Dark
         </Badge>
       );
     }
     if (type === "steel") {
       return (
-        <Badge className="bg-cyan-700 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-cyan-700 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Steel
         </Badge>
       );
     }
     if (type === "fairy") {
       return (
-        <Badge className="bg-pink-400 pokedex-entry rounded-full" key={index}>
+        <Badge
+          className="bg-pink-400 pokedex-entry md:rounded-full"
+          key={index}
+        >
           Fairy
         </Badge>
       );
@@ -204,7 +252,7 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
   }
 
   return (
-    <div className="m-auto w-3/4 pt-8 pb-24">
+    <div className="m-auto md:w-3/4 pt-8 pb-24">
       <div className="m-auto w-1/2">
         <Card className="mt-4">
           <CardHeader>
@@ -215,7 +263,7 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
             />
           </CardHeader>
           <CardContent>
-            <div className="grid lg:grid-cols-2">
+            <div className="grid md:grid-cols-2">
               <div className="text-center">
                 <h1 className="pokedex-entry-title">
                   {fixString(pokemonData.name)}
@@ -224,8 +272,9 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
               </div>
               <div className="text-center">
                 <p className="underline pokedex-entry-2">Data</p>
-                <div className="pokedex-entry-text">
+                <div className="pokedex-entry-text pb-1 md:pb-0">
                   Type:
+                  <br className="md:hidden" />
                   {pokemonData?.types.map((type, index) =>
                     fixType(type.type.name, index)
                   )}
@@ -249,7 +298,7 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
             </p>
           </CardFooter>
         </Card>
-        <div className="flex justify-between pt-4">
+        <div className="md:flex md:justify-between pt-4 text-center">
           <Button
             onClick={() => {
               if (pokemonData?.id === 1) {
@@ -258,11 +307,15 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
                 router.push(`/pokedex/${pokemonData?.id - 1}`);
               }
             }}
+            className="my-2 md:my-0"
           >
             <ChevronLeft />#{" "}
             {pokemonData?.id === 1 ? "1025" : fixID(pokemonData?.id - 1)}
           </Button>
-          <Button onClick={() => router.push(`/pokedex`)}>
+          <Button
+            onClick={() => router.push(`/pokedex`)}
+            className="my-2 md:my-0"
+          >
             Back to Pokedex
           </Button>
           <Button
@@ -273,6 +326,7 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
                 router.push(`/pokedex/${pokemonData?.id + 1}`);
               }
             }}
+            className="my-2 md:my-0"
           >
             # {pokemonData?.id === 1025 ? "0001" : fixID(pokemonData?.id + 1)}
             <ChevronRight />

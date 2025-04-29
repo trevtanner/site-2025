@@ -46,11 +46,11 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   return (
     <div
       ref={elementRef}
-      className="min-h-16 m-auto text-center text-xl pt-2 text-white"
+      className="min-h-16 m-auto text-center text-xl pt-2 text-primary"
       key={knowledgeIndex}
     >
       {pkg.title}
-      <Progress className={`w-5/6 m-auto bg-white`} value={progress}></Progress>
+      <Progress className={`w-5/6 m-auto`} value={progress}></Progress>
       {progress}%
     </div>
   );

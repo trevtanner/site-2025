@@ -58,10 +58,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${pokemon.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${pokemon.variable} antialiased container`}
       >
         <Header />
-        <div className="pt-20">{children}</div>
+        <div className="">{children}</div>
         <Footer />
       </body>
     </html>

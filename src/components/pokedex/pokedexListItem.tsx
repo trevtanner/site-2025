@@ -101,7 +101,7 @@ export const PokedexListItem: React.FC<PokedexListItemProps> = ({
 
   return (
     <TableRow
-      className="cursor-pointer"
+      className="cursor-pointer hover:bg-tertiary-300"
       onClick={() => router.push(`/pokedex/${slugNumber(dexIndex)}`)}
     >
       <TableCell>

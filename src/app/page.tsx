@@ -6,11 +6,11 @@ import { Portfolio } from "@/components/home/portfolio";
 
 export default function Home() {
   return (
-    <main>
+    <main className="main-container">
       <Hero />
       <About />
-      <Knowledge />
       <Portfolio />
+      {/* <Knowledge /> */}
       <Contact />
     </main>
   );
