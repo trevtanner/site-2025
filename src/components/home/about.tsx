@@ -106,8 +106,8 @@ const About: React.FC = () => {
           <Image
             src={imgURL}
             alt="Background Image"
-            width={350}
-            height={400}
+            width={300}
+            height={300}
             // className="object-cover"
           />
         </div>

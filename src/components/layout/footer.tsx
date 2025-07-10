@@ -73,7 +73,7 @@ export function Footer() {
         <p className="text-center text-md m-auto">
           Trevor Tanner © {currentYear} Copyright TT Web Development and Design
           |
-          <Link href={"/"} className="pl-2 hover:text-white">
+          <Link href={"/privacy-policy"} className="pl-2 hover:text-white">
             Privacy Policy
           </Link>{" "}
           |
