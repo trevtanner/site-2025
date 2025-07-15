@@ -22,23 +22,23 @@ export const Portfolio: React.FC = () => {
   const router = useRouter();
   return (
     <div className="bg-tertiary-300 pt-12 pb-12 px-8">
-      <h1 className="text-center md:text-left about-header md:b-12 md:px-12">
+      <h1 className="text-center md:text-left about-header md:b-12 md:px-16">
         Previous Projects
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-12 pb-8 md:gap-4 md:px-12">
-        <div className="md:col-span-5 md:px-8 pb-4 px-4 md:text-left text-center">
-          <p className="py-4 portfolio-p">
-            I have worked on a variety of projects, from full eCommerce websites
-            to company dashboards and single-page applications. Each project
-            receives my full attention, ensuring clean, efficient code and a
-            seamless user experience.
-          </p>
-          <Button className="">See Our Work</Button>
-        </div>
-        <div className="px-8 md:col-span-7">
-          <Carousel className="w-full lg:w-7/8 mx-auto">
+      <div className="md:w-1/2 pb-8 md:px-16 md:text-left text-center">
+        <p className="py-4 portfolio-p">
+          I have worked on a variety of projects, from full eCommerce websites
+          to company dashboards and single-page applications. Each project
+          receives my full attention, ensuring clean, efficient code and a
+          seamless user experience.
+        </p>
+        <Button className="">See Our Work</Button>
+      </div>
+      <div>
+        <div className="px-8">
+          <Carousel className="w-full mx-auto">
             <CarouselContent>
-              <CarouselItem className="md:basis-4/5">
+              <CarouselItem className="md:basis-1/3">
                 <Image
                   src={tstImage}
                   alt="image of code"
@@ -58,7 +58,7 @@ export const Portfolio: React.FC = () => {
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className="md:basis-4/5">
+              <CarouselItem className="md:basis-1/3">
                 <Image
                   src={FoI}
                   alt="image of code"
@@ -76,7 +76,7 @@ export const Portfolio: React.FC = () => {
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className="md:basis-4/5">
+              <CarouselItem className="md:basis-1/3">
                 <Image
                   src={tamaSite}
                   alt="image of code"
@@ -97,7 +97,7 @@ export const Portfolio: React.FC = () => {
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className="md:basis-4/5">
+              <CarouselItem className="md:basis-1/3">
                 <Image
                   src={pokeball}
                   alt="image of code"
@@ -112,7 +112,7 @@ export const Portfolio: React.FC = () => {
                   </div>
                 </div>
               </CarouselItem>
-              <CarouselItem className="md:basis-4/5">
+              <CarouselItem className="md:basis-1/3">
                 <Image
                   src={weather}
                   alt="image of code"

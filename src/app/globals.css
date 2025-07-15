@@ -298,3 +298,20 @@
   font-optical-sizing: auto;
   font-weight: 400;
 }
+
+.contact-header {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(50px, 2vw), 54px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.contact-p {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(16px, 2vw), 20px);
+  line-height: 1.2em;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
