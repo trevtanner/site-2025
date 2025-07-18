@@ -1,12 +1,10 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { FaBluesky, FaGithub, FaLinkedin } from "react-icons/fa6";
-import { Icons } from "../icons";
 import Link from "next/link";
 import Image from "next/image";
-import ttLogo from "@/public/TT-logo-trans.png";
-import ttLogoWhite from "@/public/TTlogo.jpg";
+// import ttLogo from "@/public/TT-logo-trans.png";
+// import ttLogoWhite from "@/public/TTlogo.jpg";
 import ttwddLogo from "@/public/TTWDDLargeLogo.webp";
 
 export function Footer() {
@@ -37,37 +35,41 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          <div className="md:col-span-6 m-auto">
+          <div className="md:col-span-8 m-auto">
             <h1 className="text-center footer-header">
               Building great websites for all of your needs.
             </h1>
             <h2 className="text-center footer-sub-header">
-              Let's get started today.
+              Let&apos;s get started today.
             </h2>
             <p className="text-center footer-text">
               Full stack developer using Next.js to build stunning single and
               multi page apps.
             </p>
-          </div>
-          <div className="text-center md:col-span-2 col-span-1">
-            <Link
-              href={"/"}
-              className="footer-text hover:text-secondary underline hover:no-underline"
-            >
-              contactus@trevorstanner.com
-            </Link>
-            <div className="flex m-auto justify-center md:justify-center gap-2 md:pt-6 pt-4">
+
+            <div className="py-2 text-center">
+              <Link
+                href={"/"}
+                className="footer-text hover:text-secondary underline hover:no-underline"
+              >
+                contactus@trevorstanner.com
+              </Link>
+            </div>
+
+            <div className="flex m-auto justify-center md:justify-center gap-2 pt-2">
               <FaGithub className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
               <FaBluesky className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
               <FaLinkedin className="h-6 w-6 my-auto hover:text-secondary cursor-pointer " />
             </div>
           </div>
+          <div className="col-span-4">
+            <Image
+              src={ttwddLogo}
+              alt="image of code"
+              className="gap-6 mt-2 m-auto w-1/3 md:w-1/2 rounded-full opacity-70"
+            />
+          </div>
         </div>
-        <Image
-          src={ttwddLogo}
-          alt="image of code"
-          className="mt-2 m-auto w-2/5 md:w-1/6 rounded-full opacity-70"
-        />
       </div>
       <div className="py-4 bg-tertiary-100">
         <p className="text-center text-md m-auto">

@@ -2,12 +2,10 @@
 
 import Image from "next/image";
 import tstImage from "@/public/tst-project.jpg";
-import tamaImage from "@/public/TamaSquareLogo.jpg";
 import tamaSite from "@/public/tamaSite.png";
 import pokeball from "@/public/pokeball.jpg";
 import weather from "@/public/weather.jpg";
 import FoI from "@/public/FoIHQ.png";
-import { useRouter } from "next/navigation";
 import {
   Carousel,
   CarouselContent,
@@ -15,11 +13,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "../ui/button";
 
 export const Portfolio: React.FC = () => {
-  const router = useRouter();
   return (
     <div className="bg-tertiary-300 pt-12 pb-12 px-8">
       <h1 className="text-center md:text-left about-header md:b-12 md:px-16">
