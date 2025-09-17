@@ -28,7 +28,9 @@ const About: React.FC = () => {
 
   return (
     <div className="pt-12 pb-12 bg-tertiary-100 px-8">
-      <h1 className="text-center md:text-left about-header pb-4 md:px-12">About/Services</h1>
+      <h1 className="text-center md:text-left about-header pb-4 md:px-12 animate-fade-in-right delay-400">
+        About/Services
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-6">
         <div className="col-span-4">
           {/* <Avatar className="m-auto w-32 h-32">
@@ -40,7 +42,7 @@ const About: React.FC = () => {
           </Avatar> */}
           <Accordion
             type="single"
-            className="w-3/4 m-auto"
+            className="w-3/4 m-auto animate-fade-in-up delay-800"
             defaultValue="item-about"
             onValueChange={(e) => setDisplayedImg(e)}
           >
@@ -102,7 +104,7 @@ const About: React.FC = () => {
           </Accordion>
         </div>
 
-        <div className="col-span-2 relative mx-auto hidden md:block">
+        <div className="col-span-2 relative mx-auto hidden md:block animate-fade-in-up delay-800">
           <Image
             src={imgURL}
             alt="Background Image"

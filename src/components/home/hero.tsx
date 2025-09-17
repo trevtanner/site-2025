@@ -35,14 +35,19 @@ export default function Hero() {
             alt="Background Image"
             fill
             className="object-cover"
+            priority={true}
           />
         </div>
         {/* Text overlay positioned on the left */}
-        <div className="absolute left-0 top-0 h-full flex items-center">
-          <div className="bg-[rgba(21,59,80,0.8)] p-6">
-            <h1 className="hero-header-text">Trevor Tanner</h1>
-            <p className="hero-sub-text">Full Stack Developer</p>
-            <p className="hero-sub-text-2">
+        <div className="absolute left-0 top-0 h-full flex items-center animate-fade-in-up">
+          <div className="bg-[rgba(21,59,80,0.8)] p-6 ">
+            <h1 className="hero-header-text animate-fade-in-up delay-400">
+              Trevor Tanner
+            </h1>
+            <p className="hero-sub-text animate-fade-in-up delay-600">
+              Full Stack Developer
+            </p>
+            <p className="hero-sub-text-2 animate-fade-in-up delay-800">
               Building stellar websites // One line at a time
             </p>
           </div>
@@ -57,13 +62,18 @@ export default function Hero() {
             alt="Background Image"
             fill
             className="w-full object-cover"
+            priority={true}
           />
         </div>
         {/* Full-width text section below the image */}
-        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-[rgba(31,41,55,0.8)] p-6">
-          <h1 className="hero-header-text">Trevor Tanner</h1>
-          <p className="hero-sub-text">Full Stack Developer</p>
-          <p className="hero-sub-text-2">
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-[rgba(31,41,55,0.8)] p-6 animate-fade-in-up">
+          <h1 className="hero-header-text animate-fade-in-up delay-400">
+            Trevor Tanner
+          </h1>
+          <p className="hero-sub-text animate-fade-in-up delay-600">
+            Full Stack Developer
+          </p>
+          <p className="hero-sub-text-2 animate-fade-in-up delay-800">
             Building stellar websites // One line at a time
           </p>
         </div>
