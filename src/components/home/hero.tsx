@@ -27,7 +27,7 @@ export default function Hero() {
 
     <>
       {/* Desktop Layout */}
-      <div className="hidden md:block relative h-[500px] bg-tertiary-100">
+      <div className="hidden md:block relative h-[600px] bg-tertiary-100">
         {/* Container with 100px padding */}
         <div className="absolute inset-0 mx-[75px]">
           <Image

@@ -435,3 +435,7 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.animatedBox.delay-1000 {
+  animation-delay: 1s;
+}

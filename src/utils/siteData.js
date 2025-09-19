@@ -63,3 +63,10 @@ export const knowledgeBase = [
   { title: "SQL", value: 80, color: "info" },
   { title: "Laravel", value: 70, color: "success" },
 ];
+
+export const portfolioDetails = [
+  { name: "Fusion of Ideas HQ", details: "", url: "", image: "" },
+  { name: "Tama Lacrosse", details: "", url: "", image: "" },
+  { name: "TT Pokedex", details: "", url: "", image: "" },
+  { name: "TT Weather", details: "", url: "", image: "" },
+];

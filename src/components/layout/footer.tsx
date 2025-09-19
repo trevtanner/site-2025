@@ -12,8 +12,8 @@ export function Footer() {
   return (
     <>
       <div className="bg-primary text-tertiary-100 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <div className="gap-x-4 md:col-span-3 pb-2 md:pb-0 mx-auto grid md:grid-cols-1 grid-cols-4 text-center md:text-left">
+        <div className="xl:grid xl:grid-cols-12 gap-6 xl:px-4">
+          <div className="gap-x-4 xl:col-span-2 col-span-1 pb-2 xl:pb-0 mx-auto grid xl:grid-cols-1 grid-cols-4 text-center xl:text-left">
             <div className="py-1">
               <Link className="footer-link hover:text-secondary" href={"/"}>
                 About
@@ -35,7 +35,7 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          <div className="md:col-span-8 m-auto">
+          <div className="xl:col-span-8 col-span-1 m-auto">
             <h1 className="text-center footer-header">
               Building great websites for all of your needs.
             </h1>
@@ -46,7 +46,9 @@ export function Footer() {
               Full stack developer using Next.js to build stunning single and
               multi page apps.
             </p>
+          </div>
 
+          <div className="gap-x-4 xl:col-span-2 col-span-1 mx-auto text-center xl:text-left">
             <div className="py-2 text-center">
               <Link
                 href={"/"}
@@ -56,18 +58,18 @@ export function Footer() {
               </Link>
             </div>
 
-            <div className="flex m-auto justify-center md:justify-center gap-2 pt-2">
+            <div className="flex m-auto justify-center xl:justify-center gap-2 pt-2">
               <FaGithub className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
               <FaBluesky className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
               <FaLinkedin className="h-6 w-6 my-auto hover:text-secondary cursor-pointer " />
             </div>
           </div>
           <div className="col-span-4">
-            <Image
+            {/* <Image
               src={ttwddLogo}
               alt="image of code"
-              className="gap-6 mt-2 m-auto w-1/3 md:w-1/2 rounded-full opacity-70"
-            />
+              className="gap-6 mt-2 m-auto w-1/3 xl:w-1/2 rounded-full opacity-70"
+            /> */}
           </div>
         </div>
       </div>

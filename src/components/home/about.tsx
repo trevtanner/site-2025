@@ -11,9 +11,15 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import { useInView } from "@/utils/useInView";
 
 const About: React.FC = () => {
   const [displayedImg, setDisplayedImg] = useState("item-about");
+  const [ref, isInView] = useInView<HTMLDivElement>({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+  });
 
   console.log(displayedImg);
 
@@ -27,91 +33,96 @@ const About: React.FC = () => {
       : "/headshot-400x600.jpg";
 
   return (
-    <div className="pt-12 pb-12 bg-tertiary-100 px-8">
-      <h1 className="text-center md:text-left about-header pb-4 md:px-12 animate-fade-in-right delay-400">
-        About/Services
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-6">
-        <div className="col-span-4">
-          {/* <Avatar className="m-auto w-32 h-32">
+    <div className={`pt-12 pb-12 bg-tertiary-100 px-8 `}>
+      <div ref={ref} className={`animatedBox ${isInView ? "visible" : ""}`}>
+        <h1 className="text-center md:text-left about-header pb-4 md:px-12 animate-fade-in-right delay-400">
+          About/Services
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-6">
+          <div className="col-span-4">
+            {/* <Avatar className="m-auto w-32 h-32">
             <AvatarImage
               src="https://trevtanner.github.io/my-site/static/media/headshot.1647446acfd9fd3f0235.jpg"
               alt="Trevor Tanner Headshot"
             />
             <AvatarFallback>TT</AvatarFallback>
           </Avatar> */}
-          <Accordion
-            type="single"
-            className="w-3/4 m-auto animate-fade-in-up delay-800"
-            defaultValue="item-about"
-            onValueChange={(e) => setDisplayedImg(e)}
-          >
-            <AccordionItem value="item-about">
-              <AccordionTrigger className="about-stack-header hover:no-underline">
-                Who am I?
-              </AccordionTrigger>
-              <AccordionContent className="about-p">
-                <p>{personalInfo.about1}</p>
-                <br />
-                <p>{personalInfo.about2}</p>
-                <br />
-                <p>{personalInfo.about3}</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-wdd">
-              <AccordionTrigger className="about-stack-header">
-                Website Development & Design
-              </AccordionTrigger>
-              <AccordionContent className=" about-p">
-                {wdd.map((pkg, index) => (
-                  <div key={index} className="pb-4">
-                    <h3 className="about-p-title">{pkg.title}</h3>
-                    <p>{pkg.about}</p>
-                  </div>
-                ))}
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-seo">
-              <AccordionTrigger className="about-stack-header">
-                SEO
-              </AccordionTrigger>
-              <AccordionContent className=" about-p">
-                {seo.map((pkg, index) => (
-                  <div key={index} className="pb-4">
-                    <h3 className="about-p-title">{pkg.title}</h3>
-                    <p>{pkg.about}</p>
-                  </div>
-                ))}
-              </AccordionContent>
-            </AccordionItem>
+            <Accordion
+              type="single"
+              className="w-3/4 m-auto animate-fade-in-up delay-800"
+              defaultValue="item-about"
+              onValueChange={(e) => setDisplayedImg(e)}
+            >
+              <AccordionItem
+                value="item-about"
+                className="animate-fade-in-up delay-400"
+              >
+                <AccordionTrigger className="about-stack-header hover:no-underline">
+                  Who am I?
+                </AccordionTrigger>
+                <AccordionContent className="about-p">
+                  <p>{personalInfo.about1}</p>
+                  <br />
+                  <p>{personalInfo.about2}</p>
+                  <br />
+                  <p>{personalInfo.about3}</p>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-wdd">
+                <AccordionTrigger className="about-stack-header">
+                  Website Development & Design
+                </AccordionTrigger>
+                <AccordionContent className=" about-p">
+                  {wdd.map((pkg, index) => (
+                    <div key={index} className="pb-4">
+                      <h3 className="about-p-title">{pkg.title}</h3>
+                      <p>{pkg.about}</p>
+                    </div>
+                  ))}
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-seo">
+                <AccordionTrigger className="about-stack-header">
+                  SEO
+                </AccordionTrigger>
+                <AccordionContent className=" about-p">
+                  {seo.map((pkg, index) => (
+                    <div key={index} className="pb-4">
+                      <h3 className="about-p-title">{pkg.title}</h3>
+                      <p>{pkg.about}</p>
+                    </div>
+                  ))}
+                </AccordionContent>
+              </AccordionItem>
 
-            <AccordionItem value="item-tools">
-              <AccordionTrigger className="about-stack-header">
-                My Tools
-              </AccordionTrigger>
-              <AccordionContent className="about-p">
-                {topPackages.map((pkg, index) => (
-                  <div key={index} className="pb-4">
-                    <h3 className="about-p-title">{pkg.title}</h3>
-                    <p>{pkg.about}</p>
-                    <a href={pkg.link} className="hover:underline">
-                      {pkg.link}
-                    </a>
-                  </div>
-                ))}
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
+              <AccordionItem value="item-tools">
+                <AccordionTrigger className="about-stack-header">
+                  My Tools
+                </AccordionTrigger>
+                <AccordionContent className="about-p">
+                  {topPackages.map((pkg, index) => (
+                    <div key={index} className="pb-4">
+                      <h3 className="about-p-title">{pkg.title}</h3>
+                      <p>{pkg.about}</p>
+                      <a href={pkg.link} className="hover:underline">
+                        {pkg.link}
+                      </a>
+                    </div>
+                  ))}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
 
-        <div className="col-span-2 relative mx-auto hidden md:block animate-fade-in-up delay-800">
-          <Image
-            src={imgURL}
-            alt="Background Image"
-            width={300}
-            height={300}
-            // className="object-cover"
-          />
+          <div className="col-span-2 relative mx-auto hidden md:block animate-fade-in-up delay-800">
+            <Image
+              src={imgURL}
+              alt="Background Image"
+              width={300}
+              height={300}
+              // className="object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>
