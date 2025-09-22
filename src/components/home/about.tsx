@@ -60,7 +60,7 @@ const About: React.FC = () => {
                 <AccordionTrigger className="about-stack-header hover:no-underline">
                   Who am I?
                 </AccordionTrigger>
-                <AccordionContent className="about-p">
+                <AccordionContent className="about-p px-4">
                   <p>{personalInfo.about1}</p>
                   <br />
                   <p>{personalInfo.about2}</p>
@@ -72,7 +72,7 @@ const About: React.FC = () => {
                 <AccordionTrigger className="about-stack-header">
                   Website Development & Design
                 </AccordionTrigger>
-                <AccordionContent className=" about-p">
+                <AccordionContent className="about-p px-4">
                   {wdd.map((pkg, index) => (
                     <div key={index} className="pb-4">
                       <h3 className="about-p-title">{pkg.title}</h3>
@@ -85,7 +85,7 @@ const About: React.FC = () => {
                 <AccordionTrigger className="about-stack-header">
                   SEO
                 </AccordionTrigger>
-                <AccordionContent className=" about-p">
+                <AccordionContent className=" about-p px-4">
                   {seo.map((pkg, index) => (
                     <div key={index} className="pb-4">
                       <h3 className="about-p-title">{pkg.title}</h3>
@@ -99,7 +99,7 @@ const About: React.FC = () => {
                 <AccordionTrigger className="about-stack-header">
                   My Tools
                 </AccordionTrigger>
-                <AccordionContent className="about-p">
+                <AccordionContent className="about-p px-4">
                   {topPackages.map((pkg, index) => (
                     <div key={index} className="pb-4">
                       <h3 className="about-p-title">{pkg.title}</h3>

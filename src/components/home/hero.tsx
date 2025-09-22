@@ -1,35 +1,27 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import {
+  MdFoundation,
+  MdDisplaySettings,
+  MdHandyman,
+  MdMyLocation,
+} from "react-icons/md";
+import { useInView } from "@/utils/useInView";
 
 export default function Hero() {
-  return (
-    // <div
-    //   className=" min-h-[55vh] bg-blend-multiply bg-gray-300 relative"
-    //   style={{
-    //     backgroundImage: "url('/homepage.jpg')",
-    //     backgroundRepeat: "no-repeat",
-    //     backgroundSize: "80%",
-    //     backgroundPositionX: "center",
-    //   }}
-    // >
-    //   <div className="hero-header">
-    //     <div className="max-w-xl">
-    //       <h1 className="mb-3 hero-header-text">Trevor Tanner</h1>
-    //       <p className="hero-sub-text">Full Stack Developer</p>
-    //       <p className="mb-4 hero-sub-text-2">
-    //         Building stellar websites // One line at a time
-    //       </p>
-    //       {/* <Button>Get Started</Button> */}
-    //     </div>
-    //   </div>
-    // </div>
+  const [ref, isInView] = useInView<HTMLDivElement>({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.2,
+  });
 
-    <>
+  return (
+    <div>
       {/* Desktop Layout */}
-      <div className="hidden md:block relative h-[600px] bg-tertiary-100">
+      <div className="hidden md:block relative h-[700px] bg-tertiary-100">
         {/* Container with 100px padding */}
-        <div className="absolute inset-0 mx-[75px]">
+        <div className="absolute inset-0">
           <Image
             src="/homepage.jpg"
             alt="Background Image"
@@ -78,6 +70,46 @@ export default function Hero() {
           </p>
         </div>
       </div>
-    </>
+      <div
+        // ref={ref}
+        className={`hidden relative h-[100px] md:grid grid-cols-4 text-center m-auto px-4 about-p-title`}
+      >
+        <div
+          ref={ref}
+          className={`animatedBoxRight ${
+            isInView ? "visible" : ""
+          } m-auto flex gap-2`}
+        >
+          <MdFoundation className="m-auto w-5 h-5" />
+          Founded 2019
+        </div>
+        <div
+          ref={ref}
+          className={`animatedBoxRight ${
+            isInView ? "visible" : ""
+          } m-auto flex gap-2`}
+        >
+          <MdDisplaySettings className="m-auto w-5 h-5" />
+          Fine-Tuned Projects
+        </div>
+        <div
+          ref={ref}
+          className={`animatedBoxRight ${
+            isInView ? "visible" : ""
+          } m-auto flex gap-2`}
+        >
+          <MdMyLocation className="m-auto w-5 h-5" /> Orange County, CA
+        </div>
+        <div
+          ref={ref}
+          className={`animatedBoxRight ${
+            isInView ? "visible" : ""
+          } m-auto flex gap-2`}
+        >
+          <MdHandyman className="m-auto w-5 h-5" />
+          Personalized Work
+        </div>
+      </div>
+    </div>
   );
 }

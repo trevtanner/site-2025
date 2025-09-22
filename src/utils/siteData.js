@@ -4,7 +4,7 @@ export const personalInfo = {
   about1:
     "Driven by a deep passion for programming, I immerse myself in coding projects both during professional hours and in my personal time. My early career experience at a large telecom company provided a solid introduction to the dynamics of a sizeable corporate environment, where I learned the importance of discipline, teamwork, and efficient problem-solving.",
   about2:
-    "As a self-taught developer specializing in Next.js, I have supplemented my hands-on experience with formal computer programming courses and am actively pursuing a Bachelor's Degree in the field, which will be completed Spring of 2025. ",
+    "As a self-taught developer specializing in Next.js, I have supplemented my hands-on experience with a Bachelor's Degree in Computer Science. I also have taken supplmental courses to learn specific languages and best practices to further enhance my ability to create stunning, industry-focused websites.",
   about3:
     "This blend of self-driven exploration and structured education has equipped me with a robust foundation and an innovative mindset. While I recognize that there is always more to learn, I view every challenge as an opportunity to enhance my expertise and deliver exceptional results for every project I undertake.",
 };

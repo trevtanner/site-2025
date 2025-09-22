@@ -1,6 +1,6 @@
 "use client";
 
-import { FaBluesky, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaBluesky, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 // import ttLogo from "@/public/TT-logo-trans.png";
@@ -51,7 +51,7 @@ export function Footer() {
           <div className="gap-x-4 xl:col-span-2 col-span-1 mx-auto text-center xl:text-left">
             <div className="py-2 text-center">
               <Link
-                href={"/"}
+                href="mailto:contactus@trevorstanner.com"
                 className="footer-text hover:text-secondary underline hover:no-underline"
               >
                 contactus@trevorstanner.com
@@ -59,9 +59,21 @@ export function Footer() {
             </div>
 
             <div className="flex m-auto justify-center xl:justify-center gap-2 pt-2">
-              <FaGithub className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
-              <FaBluesky className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
-              <FaLinkedin className="h-6 w-6 my-auto hover:text-secondary cursor-pointer " />
+              <Link href="https://github.com/trevtanner" target="_blank">
+                <FaGithub className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
+              </Link>
+              <Link href="https://x.com/trevortannerdev" target="_blank">
+                <FaXTwitter className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
+              </Link>
+              {/* <Link href="https://github.com/trevtanner">
+                <FaBluesky className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
+              </Link> */}
+              <Link
+                href="https://www.linkedin.com/in/trevorstanner/"
+                target="_blank"
+              >
+                <FaLinkedin className="h-6 w-6 my-auto hover:text-secondary cursor-pointer " />
+              </Link>
             </div>
           </div>
           <div className="col-span-4">
