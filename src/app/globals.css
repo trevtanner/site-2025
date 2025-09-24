@@ -316,7 +316,33 @@
   font-weight: 400;
 }
 
-/* Keyframe Animations (from previous code) */
+.three-p-card-title {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(3px, 2vw), 36px);
+  line-height: 1.2em;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+.three-p-header {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(26px, 2vw), 30px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.three-p-p {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(20px, 2vw), 24px);
+  line-height: 1.2em;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+/* Keyframe Animations */
 @keyframes fade-in-up {
   from {
     opacity: 0;
