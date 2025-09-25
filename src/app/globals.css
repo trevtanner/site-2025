@@ -235,6 +235,17 @@
   font-family: "Recursive", sans-serif;
 }
 
+/* Nav Bar Classes */
+.nav-text {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(20px, 2vw), 16px);
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  line-height: 1.3em;
+  color: #eef0f2;
+}
+
 /* Footer classes */
 .footer-link {
   font-family: "Raleway", sans-serif;
@@ -471,4 +482,52 @@
 .animatedBoxRight.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Base styles for the elements that will be animated */
+.animated-child {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/*
+  When the parent container has the 'in-view' class,
+  trigger the animations on the children.
+*/
+.in-view .animated-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Base styles for the elements that will be animated */
+.animated-child-right {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/*
+  When the parent container has the 'in-view' class,
+  trigger the animations on the children.
+*/
+.in-view .animated-child-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.delay-1 {
+  transition-delay: 0s;
+}
+
+.delay-2 {
+  transition-delay: 0.3s; /* Delay the second element by 300ms */
+}
+
+.delay-3 {
+  transition-delay: 0.6s; /* Delay the second element by 300ms */
+}
+
+.delay-4 {
+  transition-delay: 0.9s; /* Delay the second element by 300ms */
 }

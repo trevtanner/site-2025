@@ -18,7 +18,7 @@ const About: React.FC = () => {
   const [ref, isInView] = useInView<HTMLDivElement>({
     root: null,
     rootMargin: "0px",
-    threshold: 0.2,
+    threshold: 0.3,
   });
 
   console.log(displayedImg);
@@ -34,8 +34,8 @@ const About: React.FC = () => {
 
   return (
     <div className={`pt-12 pb-12 bg-tertiary-100 px-8 `}>
-      <div ref={ref} className={`animatedBox ${isInView ? "visible" : ""}`}>
-        <h1 className="text-center md:text-left about-header pb-4 md:px-12 animate-fade-in-right delay-400">
+      <div ref={ref} className={`${isInView ? "in-view" : ""}`}>
+        <h1 className="text-center md:text-left about-header pb-4 md:px-12 animated-child">
           About/Services
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-6">
@@ -49,7 +49,7 @@ const About: React.FC = () => {
           </Avatar> */}
             <Accordion
               type="single"
-              className="w-3/4 m-auto animate-fade-in-up delay-800"
+              className="w-3/4 m-auto animated-child"
               defaultValue="item-about"
               onValueChange={(e) => setDisplayedImg(e)}
             >
@@ -114,7 +114,7 @@ const About: React.FC = () => {
             </Accordion>
           </div>
 
-          <div className="col-span-2 relative mx-auto hidden md:block animate-fade-in-up delay-800">
+          <div className="col-span-2 relative mx-auto hidden md:block animated-child delay-2">
             <Image
               src={imgURL}
               alt="Background Image"

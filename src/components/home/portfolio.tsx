@@ -21,16 +21,16 @@ export const Portfolio: React.FC = () => {
   const [ref, isInView] = useInView<HTMLDivElement>({
     root: null,
     rootMargin: "0px",
-    threshold: 0.2,
+    threshold: 0.3,
   });
 
   return (
     <div className="bg-tertiary-300 pt-12 pb-12 px-8">
-      <div ref={ref} className={`animatedBox ${isInView ? "visible" : ""}`}>
-        <h1 className="text-center md:text-left about-header md:b-12 md:px-16">
+      <div ref={ref} className={` ${isInView ? "in-view" : ""}`}>
+        <h1 className="text-center md:text-left about-header md:b-12 md:px-16 animated-child">
           Previous Projects
         </h1>
-        <div className="md:w-1/2 pb-8 md:px-16 md:text-left text-center">
+        <div className="md:w-1/2 pb-8 md:px-16 md:text-left text-center animated-child delay-2">
           <p className="py-4 portfolio-p">
             I have worked on a variety of projects, from full eCommerce websites
             to company dashboards and single-page applications. Each project
@@ -41,7 +41,7 @@ export const Portfolio: React.FC = () => {
         </div>
         <div>
           <div className="px-8">
-            <Carousel className="w-full mx-auto">
+            <Carousel className="w-full mx-auto animated-child delay-3">
               <CarouselContent>
                 <CarouselItem className="md:basis-1/3">
                   <Image

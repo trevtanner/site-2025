@@ -71,41 +71,23 @@ export default function Hero() {
         </div>
       </div>
       <div
-        // ref={ref}
-        className={`hidden relative h-[100px] md:grid grid-cols-4 text-center m-auto px-4 about-p-title`}
+        ref={ref}
+        className={`${
+          isInView ? "in-view" : ""
+        }  hidden relative h-[100px] md:grid grid-cols-4 text-center m-auto px-4 about-p-title`}
       >
-        <div
-          ref={ref}
-          className={`animatedBoxRight ${
-            isInView ? "visible" : ""
-          } m-auto flex gap-2`}
-        >
+        <div className={`animated-child-right delay-1 m-auto flex gap-2`}>
           <MdFoundation className="m-auto w-5 h-5" />
           Founded 2019
         </div>
-        <div
-          ref={ref}
-          className={`animatedBoxRight ${
-            isInView ? "visible" : ""
-          } m-auto flex gap-2`}
-        >
+        <div className={`animated-child-right delay-2 m-auto flex gap-2`}>
           <MdDisplaySettings className="m-auto w-5 h-5" />
           Fine-Tuned Projects
         </div>
-        <div
-          ref={ref}
-          className={`animatedBoxRight ${
-            isInView ? "visible" : ""
-          } m-auto flex gap-2`}
-        >
+        <div className={`animated-child-right delay-3 m-auto flex gap-2`}>
           <MdMyLocation className="m-auto w-5 h-5" /> Orange County, CA
         </div>
-        <div
-          ref={ref}
-          className={`animatedBoxRight ${
-            isInView ? "visible" : ""
-          } m-auto flex gap-2`}
-        >
+        <div className={`animated-child-right delay-4 m-auto flex gap-2`}>
           <MdHandyman className="m-auto w-5 h-5" />
           Personalized Work
         </div>
