@@ -25,7 +25,10 @@ export function Footer() {
               </Link>
             </div>
             <div className="py-1">
-              <Link className="footer-link hover:text-secondary" href={"/"}>
+              <Link
+                className="footer-link hover:text-secondary"
+                href={"/resume"}
+              >
                 Resume
               </Link>
             </div>

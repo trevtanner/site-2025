@@ -18,6 +18,7 @@ import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { useInView } from "@/utils/useInView";
+import Link from "next/link";
 
 export const Contact: React.FC = () => {
   const [ref, isInView] = useInView<HTMLDivElement>({
@@ -51,8 +52,14 @@ export const Contact: React.FC = () => {
             site into reality.
           </p>
           <div className="text-center w-full">
-            <Button className="mt-4 bg-primary portfolio-text" size="lg">
-              <MdSend className="" /> Send an Email
+            <Button
+              className="mt-4 bg-primary portfolio-text"
+              size="lg"
+              asChild
+            >
+              <Link href="mailto:contactus@trevorstanner.com">
+                <MdSend className="" /> Send an Email
+              </Link>
             </Button>
           </div>
         </div>

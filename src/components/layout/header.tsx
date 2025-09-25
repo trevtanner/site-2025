@@ -68,7 +68,7 @@ export function Header() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
+              <Link href="/resume" legacyBehavior passHref>
                 <NavigationMenuLink className="hover:underline text-tertiary-100 p-2">
                   Resume
                 </NavigationMenuLink>
