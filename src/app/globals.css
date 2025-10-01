@@ -13,14 +13,10 @@
 }
 
 @media (max-width: 1024px) {
-  .container {
-    max-width: 100%;
-    margin: 0 auto; /* Centers the container */
-  }
-
+  .container,
   .header {
     max-width: 100%;
-    /* background-color: ; */
+    margin: 0 auto; /* Centers the container */
   }
 
   .hero-header {
@@ -67,14 +63,10 @@
 
 @media (min-width: 1024px) {
   /* Default container styling */
-  .container {
-    max-width: 100%;
-    margin: 0 auto; /* Centers the container */
-  }
-
+  .container,
   .header {
     max-width: 100%;
-    /* background-color: ; */
+    margin: 0 auto; /* Centers the container */
   }
 
   .hero-header {
@@ -88,7 +80,7 @@
   }
   .hero-header-text {
     font-family: "Raleway", sans-serif;
-    font-size: min(max(56px, 2vw), 60px);
+    font-size: min(max(60px, 2vw), 56px);
     font-weight: 700;
     color: #eef0f2;
     /* text-shadow: #000 0px 0px 4px, #000 0px 0px 4px, #000 0px 0px 4px,
@@ -98,7 +90,7 @@
 
   .hero-sub-text {
     font-family: "Raleway", sans-serif;
-    font-size: min(max(20px, 2vw), 24px);
+    font-size: min(max(28px, 2vw), 24px);
     font-weight: 400;
     color: #eef0f2;
     /* text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
@@ -108,7 +100,7 @@
 
   .hero-sub-text-2 {
     font-family: "Raleway", sans-serif;
-    font-size: min(max(16px, 2vw), 20px);
+    font-size: min(max(24px, 2vw), 20px);
     font-weight: 400;
     color: #eef0f2;
     /* text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
@@ -131,17 +123,25 @@
   }
 }
 
-.about-header {
+.home-section-header {
   font-family: "Raleway", sans-serif;
-  font-size: min(max(40px, 2vw), 42px);
+  font-size: min(max(44px, 2vw), 42px);
   font-style: normal;
   font-weight: 600;
   line-height: 1.4em;
 }
 
-.about-stack-header {
+.home-section-subheader {
   font-family: "Raleway", sans-serif;
-  font-size: min(max(16px, 2vw), 20px);
+  font-size: min(max(24px, 2vw), 20px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.home-section-subheader-2 {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(20px, 2vw), 24px);
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -149,18 +149,27 @@
   color: rgb(21, 59, 80);
 }
 
-.about-p {
+.home-section-p-1 {
   font-family: "Raleway", sans-serif;
-  font-size: min(max(12px, 2vw), 16px);
+  font-size: min(max(20px, 2vw), 18px);
   line-height: 1.2em;
   font-style: normal;
   font-optical-sizing: auto;
   font-weight: 400;
 }
 
-.about-p-title {
+.home-section-p-2 {
   font-family: "Raleway", sans-serif;
-  font-size: min(max(14px, 2vw), 18px);
+  font-size: min(max(22px, 2vw), 20px);
+  line-height: 1.2em;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.home-section-p-header {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(20px, 2vw), 18px);
   line-height: 1.3em;
   font-style: normal;
   font-optical-sizing: auto;
@@ -168,71 +177,19 @@
   color: rgb(28, 11, 25);
 }
 
-.pokedex-entry {
-  font-family: Roboto, serif;
-  font-size: medium;
+.project-button {
+  background-color: #153b50;
+  cursor: default;
+  font-size: min(max(22px, 2vw), 18px);
+}
+
+.three-p-card-title {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(36px, 2vw), 32px);
+  line-height: 1.2em;
+  font-style: normal;
   font-optical-sizing: auto;
-  font-weight: 400;
-}
-
-.pokedex-entry-title {
-  font-family: "Press Start 2P", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(15px + 0.390625vw);
-}
-
-.pokedex-entry-2 {
-  font-family: "Press Start 2P", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(8px + 0.390625vw);
-}
-
-.pokedex-entry-text {
-  font-family: "Press Start 2P", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(6px + 0.390625vw);
-}
-
-.selected-pokedex-entry-text {
-  font-family: "Press Start 2P", serif;
-  font-weight: 800;
-  font-style: normal;
-  font-size: calc(6px + 0.390625vw);
-}
-
-.weather-temp {
-  color: #eef0f2;
-  font-family: "Recursive", sans-serif;
-  font-size: calc(10px + 0.390625vw);
-}
-
-.weather-footer {
-  color: #eef0f2;
-  font-family: "Recursive", sans-serif;
-  font-size: calc(8px + 0.390625vw);
-}
-
-.description {
-  color: #eef0f2;
-  font-family: "Recursive", sans-serif;
-  font-size: calc(12px + 0.390625vw);
-  font-weight: 600;
-}
-
-.portfolio-text {
-  color: #eef0f2;
-  font-family: Roboto, serif;
-  font-size: calc(12px + 0.390625vw);
-  font-weight: 600;
-}
-
-.weather-header {
-  color: #eef0f2;
-  font-size: calc(18px + 0.390625vw);
-  font-family: "Recursive", sans-serif;
+  font-weight: 700;
 }
 
 /* Nav Bar Classes */
@@ -286,71 +243,6 @@
   font-weight: 400;
   line-height: 1.2em;
   color: #eef0f2;
-}
-
-.portfolio-heading {
-  font-family: "Raleway", sans-serif;
-  font-size: min(max(14px, 2vw), 18px);
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.4em;
-}
-
-.project-button {
-  background-color: #153b50;
-  cursor: default;
-}
-
-.portfolio-p {
-  font-family: "Raleway", sans-serif;
-  font-size: min(max(12px, 2vw), 14px);
-  line-height: 1.2em;
-  font-style: normal;
-  font-optical-sizing: auto;
-  font-weight: 400;
-}
-
-.contact-header {
-  font-family: "Raleway", sans-serif;
-  font-size: min(max(50px, 2vw), 54px);
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.4em;
-}
-
-.contact-p {
-  font-family: "Raleway", sans-serif;
-  font-size: min(max(16px, 2vw), 20px);
-  line-height: 1.2em;
-  font-style: normal;
-  font-optical-sizing: auto;
-  font-weight: 400;
-}
-
-.three-p-card-title {
-  font-family: "Raleway", sans-serif;
-  font-size: min(max(3px, 2vw), 36px);
-  line-height: 1.2em;
-  font-style: normal;
-  font-optical-sizing: auto;
-  font-weight: 700;
-}
-
-.three-p-header {
-  font-family: "Raleway", sans-serif;
-  font-size: min(max(26px, 2vw), 30px);
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.4em;
-}
-
-.three-p-p {
-  font-family: "Raleway", sans-serif;
-  font-size: min(max(20px, 2vw), 24px);
-  line-height: 1.2em;
-  font-style: normal;
-  font-optical-sizing: auto;
-  font-weight: 400;
 }
 
 /* Keyframe Animations */
@@ -503,7 +395,7 @@
 /* Base styles for the elements that will be animated */
 .animated-child-right {
   opacity: 0;
-  transform: translateX(80px);
+  transform: translateX(40px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -530,4 +422,73 @@
 
 .delay-4 {
   transition-delay: 0.9s; /* Delay the second element by 300ms */
+}
+
+
+/* External App Classes */
+.pokedex-entry {
+  font-family: Roboto, serif;
+  font-size: medium;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.pokedex-entry-title {
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(15px + 0.390625vw);
+}
+
+.pokedex-entry-2 {
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(8px + 0.390625vw);
+}
+
+.pokedex-entry-text {
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(6px + 0.390625vw);
+}
+
+.selected-pokedex-entry-text {
+  font-family: "Press Start 2P", serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: calc(6px + 0.390625vw);
+}
+
+.weather-temp {
+  color: #eef0f2;
+  font-family: "Recursive", sans-serif;
+  font-size: calc(10px + 0.390625vw);
+}
+
+.weather-footer {
+  color: #eef0f2;
+  font-family: "Recursive", sans-serif;
+  font-size: calc(8px + 0.390625vw);
+}
+
+.description {
+  color: #eef0f2;
+  font-family: "Recursive", sans-serif;
+  font-size: calc(12px + 0.390625vw);
+  font-weight: 600;
+}
+
+.portfolio-text {
+  color: #eef0f2;
+  font-family: Roboto, serif;
+  font-size: calc(12px + 0.390625vw);
+  font-weight: 600;
+}
+
+.weather-header {
+  color: #eef0f2;
+  font-size: calc(18px + 0.390625vw);
+  font-family: "Recursive", sans-serif;
 }

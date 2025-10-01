@@ -65,8 +65,10 @@ export const knowledgeBase = [
 ];
 
 export const portfolioDetails = [
+  { name: "TT Web Development & Design", details: "", url: "", image: "" },
   { name: "Fusion of Ideas HQ", details: "", url: "", image: "" },
   { name: "Tama Lacrosse", details: "", url: "", image: "" },
+  { name: "Dasher Sports", details: "", url: "", image: "" },
   { name: "TT Pokedex", details: "", url: "", image: "" },
   { name: "TT Weather", details: "", url: "", image: "" },
 ];

@@ -74,7 +74,7 @@ export default function Hero() {
         ref={ref}
         className={`${
           isInView ? "in-view" : ""
-        }  hidden relative h-[100px] md:grid grid-cols-4 text-center m-auto px-4 about-p-title`}
+        }  hidden relative h-[100px] md:grid grid-cols-4 text-center m-auto px-4 home-section-subheader`}
       >
         <div className={`animated-child-right delay-1 m-auto flex gap-2`}>
           <MdFoundation className="m-auto w-5 h-5" />

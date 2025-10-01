@@ -35,18 +35,11 @@ const About: React.FC = () => {
   return (
     <div className={`pt-12 pb-12 bg-tertiary-100 px-8 `}>
       <div ref={ref} className={`${isInView ? "in-view" : ""}`}>
-        <h1 className="text-center md:text-left about-header pb-4 md:px-12 animated-child">
+        <h1 className="text-center md:text-left home-section-header pb-4 md:px-12 animated-child">
           About/Services
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-span-4">
-            {/* <Avatar className="m-auto w-32 h-32">
-            <AvatarImage
-              src="https://trevtanner.github.io/my-site/static/media/headshot.1647446acfd9fd3f0235.jpg"
-              alt="Trevor Tanner Headshot"
-            />
-            <AvatarFallback>TT</AvatarFallback>
-          </Avatar> */}
             <Accordion
               type="single"
               className="w-3/4 m-auto animated-child"
@@ -57,10 +50,10 @@ const About: React.FC = () => {
                 value="item-about"
                 className="animate-fade-in-up delay-400"
               >
-                <AccordionTrigger className="about-stack-header hover:no-underline">
+                <AccordionTrigger className="home-section-subheader-2 hover:no-underline">
                   Who am I?
                 </AccordionTrigger>
-                <AccordionContent className="about-p px-4">
+                <AccordionContent className="home-section-p-1 px-4">
                   <p>{personalInfo.about1}</p>
                   <br />
                   <p>{personalInfo.about2}</p>
@@ -69,26 +62,26 @@ const About: React.FC = () => {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-wdd">
-                <AccordionTrigger className="about-stack-header">
+                <AccordionTrigger className="home-section-subheader-2">
                   Website Development & Design
                 </AccordionTrigger>
-                <AccordionContent className="about-p px-4">
+                <AccordionContent className="home-section-p-1 px-4">
                   {wdd.map((pkg, index) => (
                     <div key={index} className="pb-4">
-                      <h3 className="about-p-title">{pkg.title}</h3>
+                      <h3 className="home-section-p-header">{pkg.title}</h3>
                       <p>{pkg.about}</p>
                     </div>
                   ))}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-seo">
-                <AccordionTrigger className="about-stack-header">
+                <AccordionTrigger className="home-section-subheader-2">
                   SEO
                 </AccordionTrigger>
-                <AccordionContent className=" about-p px-4">
+                <AccordionContent className="home-section-p-1 px-4">
                   {seo.map((pkg, index) => (
                     <div key={index} className="pb-4">
-                      <h3 className="about-p-title">{pkg.title}</h3>
+                      <h3 className="home-section-p-header">{pkg.title}</h3>
                       <p>{pkg.about}</p>
                     </div>
                   ))}
@@ -96,13 +89,13 @@ const About: React.FC = () => {
               </AccordionItem>
 
               <AccordionItem value="item-tools">
-                <AccordionTrigger className="about-stack-header">
+                <AccordionTrigger className="home-section-subheader-2">
                   My Tools
                 </AccordionTrigger>
-                <AccordionContent className="about-p px-4">
+                <AccordionContent className="home-section-p-1 px-4">
                   {topPackages.map((pkg, index) => (
                     <div key={index} className="pb-4">
-                      <h3 className="about-p-title">{pkg.title}</h3>
+                      <h3 className="home-section-p-header">{pkg.title}</h3>
                       <p>{pkg.about}</p>
                       <a href={pkg.link} className="hover:underline">
                         {pkg.link}

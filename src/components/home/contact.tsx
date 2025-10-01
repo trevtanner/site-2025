@@ -40,23 +40,21 @@ export const Contact: React.FC = () => {
       >
         <div className={`animated-child delay-1 col-span-6 pt-24`}>
           {/* This div appears first */}
-          <h1 className="text-center about-header pb-2">Tireless Work</h1>
-          <p className="contact-p py-4 pb-12 text-left">
+          <h1 className="text-center home-section-header pb-2">
+            Tireless Work
+          </h1>
+          <p className="home-section-p-2 py-4 pb-12 text-center">
             I will work day and night to get the product created that you want
             and fits your needs. Always built to your specifications with
             unrivaled support.
           </p>
-          <p className="contact-p text-left py-4">
+          <p className="home-section-p-2 text-center py-4">
             Click below to send me an email or fill out the form to the right. I
             will get back to you as soon as possible to convert your ideas for a
             site into reality.
           </p>
           <div className="text-center w-full">
-            <Button
-              className="mt-4 bg-primary portfolio-text"
-              size="lg"
-              asChild
-            >
+            <Button className="mt-4 project-button" size="lg" asChild>
               <Link href="mailto:contactus@trevorstanner.com">
                 <MdSend className="" /> Send an Email
               </Link>
@@ -67,59 +65,76 @@ export const Contact: React.FC = () => {
           {/* This div appears second */}
           <Card className="w-4/5 m-auto">
             <CardHeader>
-              <CardTitle>How Can I Help?</CardTitle>
+              <CardTitle className="home-section-subheader text-center">
+                How Can I Help?
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <form>
                 <div className="flex flex-col gap-6">
                   <div className="grid gap-2">
-                    <Label htmlFor="email">Name</Label>
+                    <Label className="home-section-p-header" htmlFor="email">
+                      Name
+                    </Label>
                     <Input
                       id="name"
                       type="text"
                       placeholder="Enter Your Name"
+                      className="home-section-p-1"
                       required
                     />
                   </div>
                   <div className="grid gap-2">
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email" className="home-section-p-header">
+                      Email
+                    </Label>
                     <Input
                       id="email"
                       type="email"
                       placeholder="Enter Your Email"
+                      className="home-section-p-1"
                       required
                     />
                   </div>
                   <div className="grid gap-2">
-                    <Label htmlFor="email">Phone</Label>
+                    <Label htmlFor="email" className="home-section-p-header">
+                      Phone
+                    </Label>
                     <Input
                       id="name"
                       type="phone"
                       placeholder="Enter Your Phone"
+                      className="home-section-p-1"
                       required
                     />
                   </div>
                   <div className="grid gap-2">
-                    <Label htmlFor="email">Company</Label>
+                    <Label htmlFor="email" className="home-section-p-header">
+                      Company
+                    </Label>
                     <Input
                       id="company"
                       type="text"
                       placeholder="Enter Your Company"
+                      className="home-section-p-1"
                       required
                     />
                   </div>
                   <div className="grid gap-2">
-                    <Label htmlFor="email">Comments</Label>
-                    <Textarea placeholder="Any additional comments" rows={5} />
+                    <Label htmlFor="email" className="home-section-p-header">
+                      Comments
+                    </Label>
+                    <Textarea
+                      placeholder="Any additional comments"
+                      rows={5}
+                      className="home-section-p-1"
+                    />
                   </div>
                 </div>
               </form>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button
-                type="submit"
-                className="mt-4 bg-primary portfolio-text w-1/3"
-              >
+              <Button type="submit" className="mt-4 project-button w-1/3">
                 Submit
               </Button>
             </CardFooter>
