@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "../ui/button";
 import { useInView } from "@/utils/useInView";
+import Link from "next/link";
 
 export const Portfolio: React.FC = () => {
   const [ref, isInView] = useInView<HTMLDivElement>({
@@ -37,7 +38,9 @@ export const Portfolio: React.FC = () => {
             receives my full attention, ensuring clean, efficient code and a
             seamless user experience.
           </p>
-          <Button className="">See Our Work</Button>
+          <Button className="project-button">
+            <Link href={"/portfolio"}>See My Work</Link>
+          </Button>
         </div>
         <div>
           <div className="px-8">
@@ -54,10 +57,16 @@ export const Portfolio: React.FC = () => {
                       TT Web Development & Design
                     </p>
                     <div className="flex gap-2">
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         Website
                       </Button>
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         SEO
                       </Button>
                     </div>
@@ -74,10 +83,16 @@ export const Portfolio: React.FC = () => {
                       Fusion of Ideas HQ
                     </p>
                     <div className="flex gap-2">
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         Website
                       </Button>
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         Dashboard
                       </Button>
                     </div>
@@ -92,13 +107,22 @@ export const Portfolio: React.FC = () => {
                   <div className="w-3/4">
                     <p className="home-section-subheader py-2">Tama Lacrosse</p>
                     <div className="flex gap-2">
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         Website
                       </Button>
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         E-Com
                       </Button>
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         SEO
                       </Button>
                     </div>
@@ -115,10 +139,16 @@ export const Portfolio: React.FC = () => {
                       Dasher Apparel
                     </p>
                     <div className="flex gap-2">
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         Website
                       </Button>
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         SEO
                       </Button>
                     </div>
@@ -133,7 +163,10 @@ export const Portfolio: React.FC = () => {
                   <div className="w-3/4">
                     <p className="home-section-subheader py-2">TT Pokedex</p>
                     <div className="flex gap-2">
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         Web App
                       </Button>
                     </div>
@@ -148,7 +181,10 @@ export const Portfolio: React.FC = () => {
                   <div className="w-3/4">
                     <p className="home-section-subheader py-2">TT Weather</p>
                     <div className="flex gap-2">
-                      <Button size="sm" className="project-button">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                      >
                         Web App
                       </Button>
                     </div>

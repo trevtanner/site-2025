@@ -183,6 +183,7 @@
   font-size: min(max(22px, 2vw), 18px);
 }
 
+
 .three-p-card-title {
   font-family: "Raleway", sans-serif;
   font-size: min(max(36px, 2vw), 32px);
@@ -423,7 +424,6 @@
 .delay-4 {
   transition-delay: 0.9s; /* Delay the second element by 300ms */
 }
-
 
 /* External App Classes */
 .pokedex-entry {
