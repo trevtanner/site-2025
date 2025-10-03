@@ -36,7 +36,7 @@ const About: React.FC = () => {
     <div className={`pt-12 pb-12 bg-tertiary-100 px-8 `}>
       <div ref={ref} className={`${isInView ? "in-view" : ""}`}>
         <h1 className="text-center md:text-left home-section-header pb-4 md:px-12 animated-child">
-          About/Services
+          What I Do
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-span-4">
@@ -53,7 +53,7 @@ const About: React.FC = () => {
                 <AccordionTrigger className="home-section-subheader-2 hover:no-underline">
                   Who am I?
                 </AccordionTrigger>
-                <AccordionContent className="home-section-p-1 px-4">
+                <AccordionContent className="home-section-p-1 px-4 pt-4">
                   <p>{personalInfo.about1}</p>
                   <br />
                   <p>{personalInfo.about2}</p>
@@ -65,7 +65,7 @@ const About: React.FC = () => {
                 <AccordionTrigger className="home-section-subheader-2">
                   Website Development & Design
                 </AccordionTrigger>
-                <AccordionContent className="home-section-p-1 px-4">
+                <AccordionContent className="home-section-p-1 px-4 pt-4">
                   {wdd.map((pkg, index) => (
                     <div key={index} className="pb-4">
                       <h3 className="home-section-p-header">{pkg.title}</h3>
@@ -78,7 +78,7 @@ const About: React.FC = () => {
                 <AccordionTrigger className="home-section-subheader-2">
                   SEO
                 </AccordionTrigger>
-                <AccordionContent className="home-section-p-1 px-4">
+                <AccordionContent className="home-section-p-1 px-4 pt-4">
                   {seo.map((pkg, index) => (
                     <div key={index} className="pb-4">
                       <h3 className="home-section-p-header">{pkg.title}</h3>
@@ -92,7 +92,7 @@ const About: React.FC = () => {
                 <AccordionTrigger className="home-section-subheader-2">
                   My Tools
                 </AccordionTrigger>
-                <AccordionContent className="home-section-p-1 px-4">
+                <AccordionContent className="home-section-p-1 px-4 pt-4">
                   {topPackages.map((pkg, index) => (
                     <div key={index} className="pb-4">
                       <h3 className="home-section-p-header">{pkg.title}</h3>

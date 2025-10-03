@@ -183,6 +183,11 @@
   font-size: min(max(22px, 2vw), 18px);
 }
 
+.portfolio-button {
+  background-color: #153b50;
+  cursor: default;
+  font-size: min(max(18px, 2vw), 14px);
+}
 
 .three-p-card-title {
   font-family: "Raleway", sans-serif;
@@ -423,6 +428,30 @@
 
 .delay-4 {
   transition-delay: 0.9s; /* Delay the second element by 300ms */
+}
+
+.portfolio-delay-0 {
+  transition-delay: 0s;
+}
+
+.portfolio-delay-1 {
+  transition-delay: 0.2s;
+}
+
+.portfolio-delay-2 {
+  transition-delay: 0.4s; /* Delay the second element by 300ms */
+}
+
+.portfolio-delay-3 {
+  transition-delay: 0.6s; /* Delay the second element by 300ms */
+}
+
+.portfolio-delay-4 {
+  transition-delay: 0.8s; /* Delay the second element by 300ms */
+}
+
+.portfolio-delay-5 {
+  transition-delay: 1s; /* Delay the second element by 300ms */
 }
 
 /* External App Classes */

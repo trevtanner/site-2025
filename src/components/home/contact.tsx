@@ -63,7 +63,7 @@ export const Contact: React.FC = () => {
         </div>
         <div className={`animated-child delay-2 col-span-6`}>
           {/* This div appears second */}
-          <Card className="w-4/5 m-auto">
+          <Card className="w-4/5 m-auto bg-tertiary-300">
             <CardHeader>
               <CardTitle className="home-section-subheader text-center">
                 How Can I Help?
@@ -80,7 +80,7 @@ export const Contact: React.FC = () => {
                       id="name"
                       type="text"
                       placeholder="Enter Your Name"
-                      className="home-section-p-1"
+                      className="home-section-p-1 bg-tertiary-100"
                       required
                     />
                   </div>
@@ -92,7 +92,7 @@ export const Contact: React.FC = () => {
                       id="email"
                       type="email"
                       placeholder="Enter Your Email"
-                      className="home-section-p-1"
+                      className="home-section-p-1 bg-tertiary-100"
                       required
                     />
                   </div>
@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
                       id="name"
                       type="phone"
                       placeholder="Enter Your Phone"
-                      className="home-section-p-1"
+                      className="home-section-p-1 bg-tertiary-100"
                       required
                     />
                   </div>
@@ -116,7 +116,7 @@ export const Contact: React.FC = () => {
                       id="company"
                       type="text"
                       placeholder="Enter Your Company"
-                      className="home-section-p-1"
+                      className="home-section-p-1 bg-tertiary-100"
                       required
                     />
                   </div>
@@ -127,7 +127,7 @@ export const Contact: React.FC = () => {
                     <Textarea
                       placeholder="Any additional comments"
                       rows={5}
-                      className="home-section-p-1"
+                      className="home-section-p-1 bg-tertiary-100"
                     />
                   </div>
                 </div>

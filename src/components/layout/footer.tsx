@@ -15,12 +15,15 @@ export function Footer() {
         <div className="xl:grid xl:grid-cols-12 gap-6 xl:px-4">
           <div className="gap-x-4 xl:col-span-2 col-span-1 pb-2 xl:pb-0 mx-auto grid xl:grid-cols-1 grid-cols-4 text-center xl:text-left">
             <div className="py-1">
-              <Link className="footer-link hover:text-secondary" href={"/"}>
+              {/* <Link className="footer-link hover:text-secondary" href={"/"}>
                 About
-              </Link>
+              </Link> */}
             </div>
             <div className="py-1">
-              <Link className="footer-link hover:text-secondary" href={"/"}>
+              <Link
+                className="footer-link hover:text-secondary"
+                href={"/portfolio"}
+              >
                 Portfolio
               </Link>
             </div>

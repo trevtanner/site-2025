@@ -53,15 +53,15 @@ export function Header() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink className="hover:underline text-tertiary-100 p-2">
                   About
                 </NavigationMenuLink>
               </Link>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
             <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
+              <Link href="/portfolio" legacyBehavior passHref>
                 <NavigationMenuLink className="hover:underline text-tertiary-100 p-2">
                   Portfolio
                 </NavigationMenuLink>
