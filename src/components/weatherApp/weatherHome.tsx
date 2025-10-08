@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { WeatherCard } from "./weatherCard";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { BsFillCloudSunFill, BsSearch, BsGeoAlt } from "react-icons/bs";
 
 interface WeatherHomeProps {}
 
@@ -42,32 +42,41 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
   };
 
   return (
-    <div className="pt-12">
-      <div className="w-1/4 m-auto">
-        <Card className="bg-gray-600">
-          <CardContent className="pt-4">
+    <div className="pt-8">
+      <div className="m-auto">
+        <div className="flex items-center justify-center h-24 w-24 bg-gray-600 rounded-full m-auto">
+          <BsFillCloudSunFill className="h-20 w-20 text-white pb-2" />
+        </div>
+        <h1 className="text-center weather-title pt-2">T-Cast</h1>
+        <p className="text-center pb-2 italic weather-tag">
+          Simple, clear weather for any city
+        </p>
+        <Card className="bg-gray-600 w-3/4 md:w-1/3 m-auto">
+          <CardContent className="">
             <form onSubmit={formSubmitHandler}>
-              <div className="grid w-full items-center m-auto gap-2">
-                <Label htmlFor="city" className="description">
-                  City:
-                </Label>
+              <div className="w-full items-center m-auto gap-2 flex justify-center">
                 <Input
                   type="text"
                   id="city"
                   placeholder="Enter City"
                   ref={cityInputRef}
-                  className="weather-temp placeholder:text-gray-400"
+                  className="weather-temp placeholder:text-gray-400 md:w-2/3"
                 />
-              </div>
-              <div className="text-center pt-2">
-                <Button className="bg-gray-900">Submit</Button>
+                <div className="text-center">
+                  <Button size="icon" className="rounded-full bg-gray-800">
+                    <BsSearch />
+                  </Button>
+                </div>
               </div>
             </form>
           </CardContent>
+          <Button className="m-auto rounded-full bg-gray-800">
+            <BsGeoAlt /> Use Current Location
+          </Button>
         </Card>
       </div>
       {typeof data.main != "undefined" ? (
-        <div className="w-1/2 m-auto pt-8">
+        <div className="w-1/2 m-auto py-8">
           <WeatherCard weatherData={data} />
         </div>
       ) : (

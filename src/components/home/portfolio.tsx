@@ -4,8 +4,8 @@ import Image from "next/image";
 import tstImage from "@/public/tst-project.jpg";
 import tamaSite from "@/public/TamaSite.png";
 import dasherSite from "@/public/dasherApparel.png";
-import pokeball from "@/public/pokeball.jpg";
-import weather from "@/public/weather.jpg";
+import pokeball from "@/public/TTPokedex.png";
+import weather from "@/public/tCast.png";
 import FoI from "@/public/FoIHQ.png";
 import {
   Carousel,
@@ -179,7 +179,7 @@ export const Portfolio: React.FC = () => {
                     className="w-full brightness-80 hover:opacity-70 transition duration-300 ease-in-out"
                   />
                   <div className="w-3/4">
-                    <p className="home-section-subheader py-2">TT Weather</p>
+                    <p className="home-section-subheader py-2">T-Cast</p>
                     <div className="flex gap-2">
                       <Button
                         size="sm"

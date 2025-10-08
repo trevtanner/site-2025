@@ -490,6 +490,44 @@
   font-size: calc(6px + 0.390625vw);
 }
 
+.portfolio-text {
+  color: #eef0f2;
+  font-family: Roboto, serif;
+  font-size: calc(12px + 0.390625vw);
+  font-weight: 600;
+}
+
+.weather-title {
+  font-size: calc(24px + 0.390625vw);
+  font-family: "Recursive", sans-serif;
+  font-weight: 700;
+}
+
+.weather-header {
+  color: #eef0f2;
+  font-size: calc(18px + 0.390625vw);
+  font-family: "Recursive", sans-serif;
+  text-transform: capitalize;
+}
+.weather-subheader {
+  color: #eef0f2;
+  font-size: calc(10px + 0.390625vw);
+  font-family: "Recursive", sans-serif;
+}
+
+.weather-details {
+  color: #eef0f2;
+  font-size: calc(16px + 0.390625vw);
+  font-family: "Recursive", sans-serif;
+  font-weight: 400;
+}
+
+.weather-temp-main {
+  color: #eef0f2;
+  font-family: "Recursive", sans-serif;
+  font-size: calc(28px + 0.390625vw);
+}
+
 .weather-temp {
   color: #eef0f2;
   font-family: "Recursive", sans-serif;
@@ -506,18 +544,5 @@
   color: #eef0f2;
   font-family: "Recursive", sans-serif;
   font-size: calc(12px + 0.390625vw);
-  font-weight: 600;
-}
-
-.portfolio-text {
-  color: #eef0f2;
-  font-family: Roboto, serif;
-  font-size: calc(12px + 0.390625vw);
-  font-weight: 600;
-}
-
-.weather-header {
-  color: #eef0f2;
-  font-size: calc(18px + 0.390625vw);
-  font-family: "Recursive", sans-serif;
+  font-weight: 400;
 }

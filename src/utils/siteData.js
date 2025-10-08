@@ -106,11 +106,11 @@ export const portfolioDetails = [
     image: "/TTPokedex.png",
   },
   {
-    name: "TT Weather",
+    name: "T-Cast",
     description: "",
     details: ["Web App"],
     url: "/weatherApp",
     target: "",
-    image: "/weather.jpg",
+    image: "/tCast.png",
   },
 ];
