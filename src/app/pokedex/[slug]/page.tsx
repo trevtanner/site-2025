@@ -1,7 +1,7 @@
 "use server";
 
 import { PokedexEntry } from "@/components/pokedex/pokedexEntry";
-import { Pokemon, PokemonClient } from "pokenode-ts";
+import { PokemonClient } from "pokenode-ts";
 
 export default async function Page({
   params,

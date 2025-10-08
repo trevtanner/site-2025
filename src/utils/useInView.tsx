@@ -2,8 +2,8 @@ import { useState, useEffect, useRef, RefObject } from "react";
 
 export const useInView = <T extends HTMLElement>(
   options?: IntersectionObserverInit
-): [RefObject<T>, boolean] => {
-  const ref = useRef<T>(null);
+): [RefObject<T | null>, boolean] => {
+  const ref = useRef<T | null>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {

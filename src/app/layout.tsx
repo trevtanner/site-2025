@@ -21,18 +21,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const ibmPlexSerif = IBM_Plex_Serif({
-  weight: "400",
-  variable: "--font-ibm-plex-serif",
-  subsets: ["latin"],
-});
-
-const firaSans = Fira_Sans({
-  weight: "400",
-  variable: "--font-fira_sans",
-  subsets: ["latin"],
-});
-
 const roboto = Roboto({
   weight: "400",
   variable: "--font-roboto",
