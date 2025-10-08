@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import tstImage from "@/public/tst-project.jpg";
-import tamaSite from "@/public/tamaSite.png";
+import tamaSite from "@/public/TamaSite.png";
 import dasherSite from "@/public/dasherApparel.png";
 import pokeball from "@/public/pokeball.jpg";
 import weather from "@/public/weather.jpg";
