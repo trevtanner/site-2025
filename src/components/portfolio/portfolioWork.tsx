@@ -44,7 +44,6 @@ export default function PortfolioWork() {
               <CardTitle className="home-section-p-header">
                 {work.name}
               </CardTitle>
-              {/* <CardDescription>Card Description</CardDescription> */}
               <CardAction>
                 <Link
                   href={work.url}

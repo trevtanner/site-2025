@@ -26,7 +26,7 @@ export const Portfolio: React.FC = () => {
   });
 
   return (
-    <div className="bg-tertiary-300 pt-12 pb-12 px-8">
+    <div className="bg-tertiary-300 pt-12 pb-12 px-4">
       <div ref={ref} className={` ${isInView ? "in-view" : ""}`}>
         <h1 className="text-center md:text-left home-section-header md:b-12 md:px-16 animated-child">
           Previous Projects

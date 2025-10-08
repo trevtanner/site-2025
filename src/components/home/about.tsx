@@ -58,7 +58,7 @@ const About: React.FC = () => {
                   <br />
                   <p>{personalInfo.about2}</p>
                   <br />
-                  <p>{personalInfo.about3}</p>
+                  {/* <p>{personalInfo.about3}</p> */}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-wdd">

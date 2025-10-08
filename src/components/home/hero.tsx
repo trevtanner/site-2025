@@ -47,8 +47,8 @@ export default function Hero() {
       </div>
 
       {/* Mobile layout (screens <768px) */}
-      <div className="block md:hidden relative h-[50vh]">
-        <div className="block md:hidden relative h-2/3">
+      <div className="block md:hidden relative h-[40vh]">
+        <div className="block md:hidden relative h-3/4">
           <Image
             src="/homepage.jpg"
             alt="Background Image"

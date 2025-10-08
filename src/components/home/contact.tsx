@@ -36,9 +36,11 @@ export const Contact: React.FC = () => {
         ref={ref}
         className={`${
           isInView ? "in-view" : ""
-        } grid md:grid-cols-12 grid-cols-1 px-20`}
+        } grid md:grid-cols-12 grid-cols-1 md:px-20 px-4`}
       >
-        <div className={`animated-child delay-1 col-span-6 pt-24`}>
+        <div
+          className={`animated-child delay-1 col-span-6 md:pt-24 pb-8 md:pb-0`}
+        >
           {/* This div appears first */}
           <h1 className="text-center home-section-header pb-2">
             Tireless Work
@@ -62,7 +64,6 @@ export const Contact: React.FC = () => {
           </div>
         </div>
         <div className={`animated-child delay-2 col-span-6`}>
-          {/* This div appears second */}
           <Card className="w-4/5 m-auto bg-tertiary-300">
             <CardHeader>
               <CardTitle className="home-section-subheader text-center">
@@ -134,7 +135,10 @@ export const Contact: React.FC = () => {
               </form>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button type="submit" className="mt-4 project-button w-1/3">
+              <Button
+                type="submit"
+                className="mt-4 project-button w-1/2 md:w-1/3"
+              >
                 Submit
               </Button>
             </CardFooter>
