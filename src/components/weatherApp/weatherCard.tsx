@@ -111,37 +111,37 @@ export const WeatherCard: React.FC<WeatherCardProps> = ({ weatherData }) => (
         <div>
           <h3 className="weather-details my-2">Details</h3>
           <div className="flex justify-between">
-            <p className="weather-temp flex">
-              <PiWindLight className="m-auto h-6 w-6 mr-2" /> Wind:{" "}
+            <p className="weather-temp flex m-auto">
+              <PiWindLight className="h-4 w-4 md:h-6 md:w-6 mr-1" /> Wind:{" "}
               {weatherData.wind.speed.toFixed(0)} mi/h{" "}
               {degToCompass(weatherData.wind.deg)}
             </p>
-            <p className="weather-temp flex">
-              <MdOutlineWaterDrop className="m-auto h-6 w-6 mr-1" /> Humidity:{" "}
-              {weatherData.main.humidity}%
+            <p className="weather-temp flex m-auto">
+              <MdOutlineWaterDrop className="h-4 w-4 md:h-6 md:w-6 mr-1" />{" "}
+              Humidity: {weatherData.main.humidity}%
             </p>
           </div>
           <Separator className="my-2" />
           <div className="flex justify-between">
-            <p className="weather-temp flex">
-              <WiBarometer className="m-auto h-6 w-6 mr-2" /> Pressure:{" "}
+            <p className="weather-temp flex m-auto">
+              <WiBarometer className="h-4 w-4 md:h-6 md:w-6 mr-1" /> Pressure:{" "}
               {(weatherData.main.pressure * 0.0009869233).toFixed(4)} atm
             </p>
-            <p className="weather-temp flex">
-              <MdOutlineRemoveRedEye className="m-auto h-6 w-6 mr-1" />{" "}
+            <p className="weather-temp flex m-auto">
+              <MdOutlineRemoveRedEye className="h-4 w-4 md:h-6 md:w-6 mr-1" />{" "}
               Visibility: {(weatherData.visibility / 1000 / 1.609).toFixed(2)}mi
             </p>
           </div>
           <Separator className="my-2" />
           <div className="flex justify-between">
-            <p className="weather-temp flex">
-              <BsSunrise className="m-auto h-6 w-6 mr-2" /> Sunrise:{" "}
+            <p className="weather-temp flex m-auto">
+              <BsSunrise className="h-4 w-4 md:h-6 md:w-6 mr-1" /> Sunrise:{" "}
               {new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString(
                 "en-US"
               )}
             </p>
-            <p className="weather-temp flex">
-              <BsSunset className="m-auto h-6 w-6 mr-2" /> Sunset:{" "}
+            <p className="weather-temp flex m-auto">
+              <BsSunset className="h-4 w-4 md:h-6 md:w-6 mr-1" /> Sunset:{" "}
               {new Date(weatherData.sys.sunset * 1000).toLocaleTimeString(
                 "en-US"
               )}

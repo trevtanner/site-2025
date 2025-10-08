@@ -51,7 +51,7 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
         <p className="text-center pb-2 italic weather-tag">
           Simple, clear weather for any city
         </p>
-        <Card className="bg-gray-600 w-3/4 md:w-1/3 m-auto">
+        <Card className="bg-gray-600 w-5/6 md:w-1/3 m-auto">
           <CardContent className="">
             <form onSubmit={formSubmitHandler}>
               <div className="w-full items-center m-auto gap-2 flex justify-center">
@@ -76,7 +76,7 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
         </Card>
       </div>
       {typeof data.main != "undefined" ? (
-        <div className="w-1/2 m-auto py-8">
+        <div className="w-5/6 md:w-1/2 m-auto py-8">
           <WeatherCard weatherData={data} />
         </div>
       ) : (
