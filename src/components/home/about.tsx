@@ -36,7 +36,7 @@ const About: React.FC = () => {
     <div className={`pt-12 pb-12 bg-tertiary-100 px-8 `}>
       <div ref={ref} className={`${isInView ? "in-view" : ""}`}>
         <h1 className="text-center md:text-left home-section-header pb-4 md:px-12 animated-child">
-          What I Do
+          Services
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="col-span-4">
