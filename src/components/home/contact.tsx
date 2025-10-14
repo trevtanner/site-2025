@@ -19,6 +19,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { useInView } from "@/utils/useInView";
 import Link from "next/link";
+import { ContactForm } from "../forms/contactForm";
 
 export const Contact: React.FC = () => {
   const [ref, isInView] = useInView<HTMLDivElement>({
@@ -64,85 +65,7 @@ export const Contact: React.FC = () => {
           </div>
         </div>
         <div className={`animated-child delay-2 col-span-6`}>
-          <Card className="w-4/5 m-auto bg-tertiary-300">
-            <CardHeader>
-              <CardTitle className="home-section-subheader text-center">
-                How Can I Help?
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form>
-                <div className="flex flex-col gap-6">
-                  <div className="grid gap-2">
-                    <Label className="home-section-p-header" htmlFor="email">
-                      Name
-                    </Label>
-                    <Input
-                      id="name"
-                      type="text"
-                      placeholder="Enter Your Name"
-                      className="home-section-p-1 bg-tertiary-100"
-                      required
-                    />
-                  </div>
-                  <div className="grid gap-2">
-                    <Label htmlFor="email" className="home-section-p-header">
-                      Email
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="Enter Your Email"
-                      className="home-section-p-1 bg-tertiary-100"
-                      required
-                    />
-                  </div>
-                  <div className="grid gap-2">
-                    <Label htmlFor="email" className="home-section-p-header">
-                      Phone
-                    </Label>
-                    <Input
-                      id="name"
-                      type="phone"
-                      placeholder="Enter Your Phone"
-                      className="home-section-p-1 bg-tertiary-100"
-                      required
-                    />
-                  </div>
-                  <div className="grid gap-2">
-                    <Label htmlFor="email" className="home-section-p-header">
-                      Company
-                    </Label>
-                    <Input
-                      id="company"
-                      type="text"
-                      placeholder="Enter Your Company"
-                      className="home-section-p-1 bg-tertiary-100"
-                      required
-                    />
-                  </div>
-                  <div className="grid gap-2">
-                    <Label htmlFor="email" className="home-section-p-header">
-                      Comments
-                    </Label>
-                    <Textarea
-                      placeholder="Any additional comments"
-                      rows={5}
-                      className="home-section-p-1 bg-tertiary-100"
-                    />
-                  </div>
-                </div>
-              </form>
-            </CardContent>
-            <CardFooter className="flex-col gap-2">
-              <Button
-                type="submit"
-                className="mt-4 project-button w-1/2 md:w-1/3"
-              >
-                Submit
-              </Button>
-            </CardFooter>
-          </Card>
+          <ContactForm />
         </div>
       </div>
     </div>

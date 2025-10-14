@@ -78,7 +78,7 @@ export default function Hero() {
       >
         <div className={`animated-child-right delay-1 m-auto flex gap-2`}>
           <MdFoundation className="m-auto w-5 h-5" />
-          Founded 2019
+          Started 2019
         </div>
         <div className={`animated-child-right delay-2 m-auto flex gap-2`}>
           <MdDisplaySettings className="m-auto w-5 h-5" />

@@ -113,13 +113,13 @@
 /* When the viewport is larger than 2000px, constrain the width */
 @media (min-width: 2000px) {
   .container {
-    max-width: 2000px;
-    background-color: #c0c0c0;
+    max-width: 100%;
+    /* background-color: #c0c0c0; */
   }
 
   .header {
-    max-width: 2000px;
-    background-color: #1f2937;
+    max-width: 100%;
+    /* background-color: #1f2937; */
   }
 }
 
@@ -504,44 +504,50 @@
 }
 
 .weather-header {
-  color: #eef0f2;
+  color: #091727;
   font-size: calc(18px + 0.390625vw);
   font-family: "Recursive", sans-serif;
   text-transform: capitalize;
 }
 .weather-subheader {
-  color: #eef0f2;
+  color: #091727;
   font-size: calc(10px + 0.390625vw);
   font-family: "Recursive", sans-serif;
 }
 
+.weather-form {
+  color: #ffffff;
+  font-family: "Recursive", sans-serif;
+  font-size: calc(10px + 0.390625vw);
+}
+
 .weather-details {
-  color: #eef0f2;
+  color: #091727;
   font-size: calc(16px + 0.390625vw);
   font-family: "Recursive", sans-serif;
   font-weight: 400;
 }
 
 .weather-temp-main {
-  color: #eef0f2;
+  color: #091727;
   font-family: "Recursive", sans-serif;
   font-size: calc(28px + 0.390625vw);
 }
 
 .weather-temp {
-  color: #eef0f2;
+  color: #091727;
   font-family: "Recursive", sans-serif;
   font-size: calc(10px + 0.390625vw);
 }
 
 .weather-footer {
-  color: #eef0f2;
+  color: #091727;
   font-family: "Recursive", sans-serif;
   font-size: calc(8px + 0.390625vw);
 }
 
 .description {
-  color: #eef0f2;
+  color: #091727;
   font-family: "Recursive", sans-serif;
   font-size: calc(12px + 0.390625vw);
   font-weight: 400;

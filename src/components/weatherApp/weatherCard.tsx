@@ -76,7 +76,7 @@ const degToCompass = (deg: number) => {
 };
 
 export const WeatherCard: React.FC<WeatherCardProps> = ({ weatherData }) => (
-  <Card className="bg-gray-600">
+  <Card className="bg-gray-400">
     <CardHeader>
       <CardTitle className="text-center">
         <p className="weather-header">{weatherData.name}</p>

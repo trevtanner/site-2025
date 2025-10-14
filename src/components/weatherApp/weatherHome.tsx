@@ -1,46 +1,136 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState, useCallback } from "react";
 import { WeatherCard } from "./weatherCard";
 import { Input } from "@/components/ui/input";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BsFillCloudSunFill, BsSearch, BsGeoAlt } from "react-icons/bs";
+import { WeatherCardSkeleton } from "./weatherCardSkeleton";
+
+// A type for the OpenWeatherMap API response
+interface WeatherData {
+  coord: { lon: number; lat: number };
+  weather: { id: number; main: string; description: string; icon: string }[];
+  base: string;
+  main: {
+    temp: number;
+    feels_like: number;
+    temp_min: number;
+    temp_max: number;
+    pressure: number;
+    humidity: number;
+  };
+  visibility: number;
+  wind: { speed: number; deg: number };
+  clouds: { all: number };
+  dt: number;
+  sys: {
+    type: number;
+    id: number;
+    country: string;
+    sunrise: number;
+    sunset: number;
+  };
+  timezone: number;
+  id: number;
+  name: string;
+  cod: number | string; // Can be 200 or "404" as a string
+  message?: string; // Present on errors like "city not found"
+}
 
 interface WeatherHomeProps {}
 
+interface CoordsState {
+  latitude: number;
+  longitude: number;
+}
+
 export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
-  const [data, setData] = useState<any>([]);
-  const [enteredCity, setEnteredCity] = useState("");
-  const cityInputRef = useRef<HTMLInputElement | null>(null);
+  const [data, setData] = useState<WeatherData | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [isLoadingLocation, setIsLoadingLocation] = useState<boolean>(false);
+  const [isLoadingData, setIsLoadingData] = useState<boolean>(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      // navigator.geolocation.getCurrentPosition(function (position) {
-      //   setLat(position.coords.latitude);
-      //   setLong(position.coords.longitude);
-      // });
+  const [city, setCity] = useState("");
 
-      await fetch(
-        `https://api.openweathermap.org/data/2.5/weather/?q=${enteredCity}&units=imperial&APPID=511da6b9288c4ff19c0140c112ddf4a0`
-      )
-        .then((res) => res.json())
-        .then((result) => {
-          setData(result);
-          console.log(result);
-        });
-    };
-    fetchData();
-  }, [enteredCity]);
-
-  const formSubmitHandler = (event: any) => {
+  const formSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
-    if (cityInputRef.current) {
-      const enteredValue = cityInputRef.current.value;
-      setEnteredCity(enteredValue);
+    if (city.trim()) {
+      fetchWeather({ city });
     }
   };
 
+  const fetchWeather = useCallback(
+    async (params: { city?: string; coords?: CoordsState }) => {
+      setIsLoadingData(true);
+      setError(null);
+      setData(null);
+
+      try {
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=imperial&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}`;
+
+        if (params.city) {
+          apiUrl += `&q=${params.city}`;
+        } else if (params.coords) {
+          apiUrl += `&lat=${params.coords.latitude}&lon=${params.coords.longitude}`;
+        } else {
+          throw new Error("City or coordinates must be provided.");
+        }
+
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const result: WeatherData = await response.json();
+        setData(result);
+      } catch (e) {
+        const errorMessage =
+          e instanceof Error ? e.message : "An unknown API error occurred.";
+        console.error("API Fetch Error:", e);
+        setError(`Failed to fetch data: ${errorMessage}`);
+      } finally {
+        setIsLoadingData(false);
+      }
+    },
+    []
+  );
+
+  const requestLocation = useCallback(() => {
+    setError(null);
+    setCity("");
+
+    if (!("geolocation" in navigator)) {
+      setError("Geolocation is not supported by your browser.");
+      return;
+    }
+
+    setIsLoadingLocation(true);
+
+    navigator.geolocation.getCurrentPosition(
+      // Success Callback: position is of type GeolocationPosition
+      (position: GeolocationPosition) => {
+        const locationCoords: CoordsState = {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        };
+        // Pass the coordinates inside a 'coords' object
+        fetchWeather({ coords: locationCoords });
+        setIsLoadingLocation(false);
+      },
+      // Error Callback: err is of type GeolocationPositionError
+      (err: GeolocationPositionError) => {
+        console.error("Geolocation Error:", err);
+        setError(err.message || "Location access denied or unavailable.");
+        setIsLoadingLocation(false);
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0,
+      }
+    );
+  }, [fetchWeather]); // Dependency array includes fetchWeather
   return (
     <div className="pt-8">
       <div className="m-auto">
@@ -58,9 +148,10 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
                 <Input
                   type="text"
                   id="city"
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
                   placeholder="Enter City"
-                  ref={cityInputRef}
-                  className="weather-temp placeholder:text-gray-400 md:w-2/3"
+                  className="weather-temp placeholder:text-gray-400 md:w-2/3 bg-gray-400"
                 />
                 <div className="text-center">
                   <Button size="icon" className="rounded-full bg-gray-800">
@@ -70,13 +161,38 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
               </div>
             </form>
           </CardContent>
-          <Button className="m-auto rounded-full bg-gray-800">
-            <BsGeoAlt /> Use Current Location
-          </Button>
         </Card>
+        <div className="w-full flex justify-center pt-2">
+          <Button
+            className="m-auto rounded-full bg-gray-800"
+            onClick={requestLocation}
+            disabled={isLoadingLocation || isLoadingData}
+          >
+            {isLoadingLocation ? (
+              "Getting Location..."
+            ) : (
+              <>
+                <BsGeoAlt /> Use Current Location
+              </>
+            )}
+          </Button>
+        </div>
       </div>
-      {typeof data.main != "undefined" ? (
-        <div className="w-5/6 md:w-1/2 m-auto py-8">
+      {isLoadingData && (
+        <div className="w-full md:w-2/3 m-auto py-8">
+          <WeatherCardSkeleton weatherData={data} />
+        </div>
+      )}
+      {error && (
+        <div className="m-auto py-8 text-center text-red-500">{error}</div>
+      )}
+      {data && data.cod === "404" && (
+        <div className="m-auto py-8 text-center text-red-500 capitalize">
+          {data.message}
+        </div>
+      )}
+      {data && data.cod === 200 ? (
+        <div className="w-full md:w-2/3 m-auto py-8">
           <WeatherCard weatherData={data} />
         </div>
       ) : (
