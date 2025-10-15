@@ -68,21 +68,30 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
       setData(null);
 
       try {
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=imperial&appid=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}`;
+        // Use a URL object to safely build the query string for our local API route
+        const apiUrl = new URL(
+          "/api/weather-app/fetch",
+          window.location.origin
+        );
 
         if (params.city) {
-          apiUrl += `&q=${params.city}`;
+          apiUrl.searchParams.append("city", params.city);
         } else if (params.coords) {
-          apiUrl += `&lat=${params.coords.latitude}&lon=${params.coords.longitude}`;
+          apiUrl.searchParams.append("lat", String(params.coords.latitude));
+          apiUrl.searchParams.append("lon", String(params.coords.longitude));
         } else {
           throw new Error("City or coordinates must be provided.");
         }
 
-        const response = await fetch(apiUrl);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        const response = await fetch(apiUrl.toString());
         const result: WeatherData = await response.json();
+
+        if (!response.ok) {
+          // Use the error message from the API route if available
+          const errorText =
+            result.message || `HTTP error! status: ${response.status}`;
+          throw new Error(errorText);
+        }
         setData(result);
       } catch (e) {
         const errorMessage =
