@@ -6,8 +6,6 @@ export async function GET(request) {
   const lat = searchParams.get("lat");
   const lon = searchParams.get("lon");
 
-  // Use a server-side environment variable.
-  // Remember to rename NEXT_PUBLIC_WEATHER_API_KEY to WEATHER_API_KEY in your .env file
   const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
 
   if (!apiKey) {
@@ -33,11 +31,10 @@ export async function GET(request) {
 
   try {
     const apiResponse = await fetch(externalApiUrl, {
-      next: { revalidate: 600 }, // Cache the response for 10 minutes
+      next: { revalidate: 600 },
     });
     const data = await apiResponse.json();
 
-    // Forward the response from OpenWeatherMap API to the client
     return NextResponse.json(data, { status: apiResponse.status });
   } catch (error) {
     console.error("API Route fetch error:", error);

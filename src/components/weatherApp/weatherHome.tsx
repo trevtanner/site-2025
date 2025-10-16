@@ -8,7 +8,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { BsFillCloudSunFill, BsSearch, BsGeoAlt } from "react-icons/bs";
 import { WeatherCardSkeleton } from "./weatherCardSkeleton";
 
-// A type for the OpenWeatherMap API response
 interface WeatherData {
   coord: { lon: number; lat: number };
   weather: { id: number; main: string; description: string; icon: string }[];
@@ -35,8 +34,8 @@ interface WeatherData {
   timezone: number;
   id: number;
   name: string;
-  cod: number | string; // Can be 200 or "404" as a string
-  message?: string; // Present on errors like "city not found"
+  cod: number | string;
+  message?: string;
 }
 
 interface WeatherHomeProps {}
@@ -68,7 +67,6 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
       setData(null);
 
       try {
-        // Use a URL object to safely build the query string for our local API route
         const apiUrl = new URL(
           "/api/weather-app/fetch",
           window.location.origin
@@ -87,7 +85,6 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
         const result: WeatherData = await response.json();
 
         if (!response.ok) {
-          // Use the error message from the API route if available
           const errorText =
             result.message || `HTTP error! status: ${response.status}`;
           throw new Error(errorText);
@@ -117,17 +114,16 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
     setIsLoadingLocation(true);
 
     navigator.geolocation.getCurrentPosition(
-      // Success Callback: position is of type GeolocationPosition
       (position: GeolocationPosition) => {
         const locationCoords: CoordsState = {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
         };
-        // Pass the coordinates inside a 'coords' object
+
         fetchWeather({ coords: locationCoords });
         setIsLoadingLocation(false);
       },
-      // Error Callback: err is of type GeolocationPositionError
+
       (err: GeolocationPositionError) => {
         console.error("Geolocation Error:", err);
         setError(err.message || "Location access denied or unavailable.");
@@ -139,7 +135,7 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
         maximumAge: 0,
       }
     );
-  }, [fetchWeather]); // Dependency array includes fetchWeather
+  }, [fetchWeather]);
   return (
     <div className="pt-8">
       <div className="m-auto">
