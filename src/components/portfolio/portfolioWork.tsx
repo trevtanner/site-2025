@@ -45,13 +45,15 @@ export default function PortfolioWork() {
                 {work.name}
               </CardTitle>
               <CardAction>
-                <Link
-                  href={work.url}
-                  target={work.target}
-                  className="hover:underline"
-                >
-                  View
-                </Link>
+                {work.url && (
+                  <Link
+                    href={work.url}
+                    target={work.target}
+                    className="hover:underline"
+                  >
+                    View
+                  </Link>
+                )}
               </CardAction>
             </CardHeader>
             <CardContent>
