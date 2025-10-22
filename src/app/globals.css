@@ -251,6 +251,23 @@
   color: #eef0f2;
 }
 
+.privacy-section-subheader {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(20px, 2vw), 18px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.privacy-section-p {
+  font-family: "Raleway", sans-serif;
+  font-size: min(max(16px, 2vw), 14px);
+  line-height: 1.2em;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
 /* Keyframe Animations */
 @keyframes fade-in-up {
   from {

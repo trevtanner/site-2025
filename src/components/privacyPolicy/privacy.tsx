@@ -3,12 +3,12 @@
 const Privacy: React.FC = () => {
   return (
     <div className="pt-12 pb-12 bg-tertiary-100 px-8">
-      <h1 className="text-center md:text-left about-header pb-4 md:px-12">
+      <h1 className="text-center md:text-left home-section-header pb-4 md:px-8">
         Privacy Policy
       </h1>
       <div className="pt-4 pb-8">
         <div className="pb-2 px-8">
-          <p className="about-p">
+          <p className="privacy-section-p">
             Your privacy is important to us. It is TT Web Development & Design's
             policy to respect your privacy regarding any information we may
             collect from you across our website, https://trevorstanner.com, and
@@ -16,10 +16,10 @@ const Privacy: React.FC = () => {
           </p>
         </div>
         <div className="py-2 px-8">
-          <h1 className="text-left about-p-title">
+          <h1 className="text-left privacy-section-subheader">
             Collection of your Personal Information
           </h1>
-          <p className="about-p">
+          <p className="privacy-section-p">
             We only ask for personal information when we truly need it to
             provide a service to you. We collect it by fair and lawful means,
             with your knowledge and consent. We only retain collected
@@ -33,10 +33,10 @@ const Privacy: React.FC = () => {
         </div>
 
         <div className="py-2 px-8">
-          <h1 className="text-left about-p-title">
+          <h1 className="text-left privacy-section-subheader">
             Use and Sharing of your Personal Information
           </h1>
-          <p className="about-p">
+          <p className="privacy-section-p">
             What data we store, we’ll protect within commercially acceptable
             means to prevent loss and theft, as well as unauthorized access,
             disclosure, copying, use or modification. We don’t share any
@@ -46,8 +46,8 @@ const Privacy: React.FC = () => {
         </div>
 
         <div className="py-2 px-8">
-          <h1 className="text-left about-p-title">Links</h1>
-          <p className="about-p">
+          <h1 className="text-left privacy-section-subheader">Links</h1>
+          <p className="privacy-section-p">
             Our website may link to external sites that are not operated by us.
             Please be aware that we have no control over the content and
             practices of these sites, and cannot accept responsibility or
@@ -56,8 +56,8 @@ const Privacy: React.FC = () => {
         </div>
 
         <div className="py-2 px-8">
-          <h1 className="text-left about-p-title">Opt-Out</h1>
-          <p className="about-p">
+          <h1 className="text-left privacy-section-subheader">Opt-Out</h1>
+          <p className="privacy-section-p">
             You are free to refuse our request for your personal information,
             with the understanding that we may be unable to provide you with
             some of your desired services. If you have any questions about how
@@ -67,8 +67,10 @@ const Privacy: React.FC = () => {
         </div>
 
         <div className="py-2 px-8">
-          <h1 className="text-left about-p-title">Contact Information</h1>
-          <p className="about-p">
+          <h1 className="text-left privacy-section-subheader">
+            Contact Information
+          </h1>
+          <p className="privacy-section-p">
             TT Web Development & Design welcomes your questions or comments
             regarding this Statement of Privacy. If you believe that we have not
             adhered to this Statement, please contact us at:
@@ -76,10 +78,10 @@ const Privacy: React.FC = () => {
         </div>
 
         <div className="py-2 px-8">
-          <p className="about-p">TT Web Development & Design</p>
+          <p className="privacy-section-p">TT Web Development & Design</p>
 
           <a
-            className="about-p hover:underline"
+            className="privacy-section-p hover:underline"
             href=" https://trevorstanner.com/contact/"
           >
             https://trevorstanner.com/contact/
