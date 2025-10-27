@@ -48,7 +48,18 @@ export default function PortfolioWork() {
               </CardAction>
             </CardHeader>
             <CardContent>
-              <Link href={work.url} target={work.target}>
+              {work.url ? (
+                <Link href={work.url} target={work.target}>
+                  <Image
+                    src={work.image}
+                    alt={work.name}
+                    width={400}
+                    height={400}
+                    className="m-auto rounded-lg"
+                    priority={true}
+                  />
+                </Link>
+              ) : (
                 <Image
                   src={work.image}
                   alt={work.name}
@@ -57,7 +68,7 @@ export default function PortfolioWork() {
                   className="m-auto rounded-lg"
                   priority={true}
                 />
-              </Link>
+              )}
             </CardContent>
             <CardFooter className="gap-2">
               {work.details.map((detail, index) => (
