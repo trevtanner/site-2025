@@ -268,6 +268,20 @@
   font-weight: 400;
 }
 
+.contact-button-1 {
+  background-color: #153b50;
+  cursor: default;
+  font-size: min(max(20px, 2vw), 16px);
+}
+
+.contact-button-2 {
+  background-color: #c6c7c4;
+  color: #153B50;
+  cursor: default;
+  font-size: min(max(20px, 2vw), 16px);
+}
+
+
 /* Keyframe Animations */
 @keyframes fade-in-up {
   from {

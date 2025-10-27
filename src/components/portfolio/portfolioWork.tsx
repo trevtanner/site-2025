@@ -25,15 +25,6 @@ export default function PortfolioWork() {
       ref={ref}
       className={`${isInView ? "in-view" : ""} bg-tertiary-300 py-10`}
     >
-      <div>
-        <h1 className="home-section-subheader text-center py-2 flex justify-center gap-2 text-primary animated-child">
-          <FaGripLines className="my-auto" /> My Portfolio
-          <FaGripLines className="my-auto" />
-        </h1>
-        <p className="home-section-header text-center py-2 animated-child">
-          Check Out My Previous Work
-        </p>
-      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-4 px-12 gap-4">
         {portfolioDetails.map((work, index) => (
           <Card

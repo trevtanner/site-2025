@@ -2,21 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { MdSend, MdOutlineFileDownload } from "react-icons/md";
-import { LuClock } from "react-icons/lu";
-import Image from "next/image";
-import ttLogoWhite from "@/public/TTlogo.jpg";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
+import { MdSend } from "react-icons/md";
 import { useInView } from "@/utils/useInView";
 import Link from "next/link";
 import { ContactForm } from "../forms/contactForm";
