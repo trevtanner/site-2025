@@ -14,8 +14,15 @@ export const Contact: React.FC = () => {
     threshold: 0.2,
   });
 
-  const getAnimatedClass = (delayClass = "") =>
-    `animated-child ${isInView ? "in-view" : ""} ${delayClass}`;
+  function sendEmail() {
+    const recipient = "contactus@trevorstanner.com";
+
+    // Construct the mailto URL
+    const mailtoLink = `mailto:${recipient}`;
+
+    // Open the mailto link
+    window.location.href = mailtoLink;
+  }
 
   return (
     <div className="py-12 bg-tertiary-100">
@@ -43,14 +50,18 @@ export const Contact: React.FC = () => {
             site into reality.
           </p>
           <div className="text-center w-full">
-            <Button className="mt-4 project-button" size="lg" asChild>
-              <Link href="mailto:contactus@trevorstanner.com">
-                <MdSend className="" /> Send an Email
-              </Link>
+            <Button
+              className="mt-4 project-button"
+              size="lg"
+              onClick={sendEmail}
+            >
+              <MdSend className="" /> Send an Email
             </Button>
           </div>
         </div>
-        <div className={`animated-child delay-2 col-span-6`}>
+        <div
+          className={`animated-child delay-2 col-span-6 place-content-center`}
+        >
           <ContactForm />
         </div>
       </div>
