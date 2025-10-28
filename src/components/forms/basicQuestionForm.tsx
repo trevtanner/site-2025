@@ -38,7 +38,7 @@ const formSchema = z.object({
   topic: z.string().max(50, { message: "Topic selection is required." }),
   company: z.string().max(50),
   website: z.string().max(50),
-  comments: z.string().max(1000),
+  comments: z.string().max(1000, { message: "A comment is required." }),
 });
 
 export const BasicQuestionForm: React.FC = () => {
@@ -60,6 +60,7 @@ export const BasicQuestionForm: React.FC = () => {
 
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true);
     try {
       const response = await fetch("/api/send-contact", {
         method: "POST",
@@ -87,140 +88,156 @@ export const BasicQuestionForm: React.FC = () => {
   }
 
   return (
-    <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className="w-4/5 m-auto bg-tertiary-300 p-4 rounded-lg"
-      >
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem className="mt-2">
-              <FormLabel>Name*</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Enter Your Name"
-                  {...field}
-                  className="home-section-p-1 bg-tertiary-100"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem className="mt-2">
-              <FormLabel>Email*</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Enter Your Email"
-                  {...field}
-                  className="home-section-p-1 bg-tertiary-100"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+    <>
+      {sucessfulSubmit && (
+        <p className="home-section-subheader text-center">
+          Form submitted sucessfully, we will get back to you as soon as
+          possible.
+        </p>
+      )}
+      {!sucessfulSubmit && (
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="w-4/5 m-auto bg-tertiary-300 p-4 rounded-lg"
+          >
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem className="mt-2">
+                  <FormLabel>Name*</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Enter Your Name"
+                      {...field}
+                      className="home-section-p-1 bg-tertiary-100"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem className="mt-2">
+                  <FormLabel>Email*</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Enter Your Email"
+                      {...field}
+                      className="home-section-p-1 bg-tertiary-100"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        <FormField
-          control={form.control}
-          name="company"
-          render={({ field }) => (
-            <FormItem className="mt-2">
-              <FormLabel>Company</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Enter Your Company"
-                  {...field}
-                  className="home-section-p-1 bg-tertiary-100"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+            <FormField
+              control={form.control}
+              name="company"
+              render={({ field }) => (
+                <FormItem className="mt-2">
+                  <FormLabel>Company</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Enter Your Company"
+                      {...field}
+                      className="home-section-p-1 bg-tertiary-100"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        <FormField
-          control={form.control}
-          name="website"
-          render={({ field }) => (
-            <FormItem className="mt-2">
-              <FormLabel>Website</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Enter Your Current Website"
-                  {...field}
-                  className="home-section-p-1 bg-tertiary-100"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+            <FormField
+              control={form.control}
+              name="website"
+              render={({ field }) => (
+                <FormItem className="mt-2">
+                  <FormLabel>Website</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Enter Your Current Website"
+                      {...field}
+                      className="home-section-p-1 bg-tertiary-100"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        <FormField
-          control={form.control}
-          name="topic"
-          render={() => (
-            <FormItem className="mt-2">
-              <FormLabel>Topic</FormLabel>
-              <FormControl>
-                <Select>
-                  <SelectTrigger className=" bg-tertiary-100">
-                    <SelectValue placeholder="Select a Topic" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectItem value="Pre-Sales">Pre-Sales</SelectItem>
-                      <SelectItem value="General Question">
-                        General Question
-                      </SelectItem>
-                      <SelectItem value="Bug Report">Bug Report</SelectItem>
-                      <SelectItem value="Other">Other</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+            <FormField
+              control={form.control}
+              name="topic"
+              render={({ field }) => (
+                <FormItem className="mt-2">
+                  <FormLabel>Topic*</FormLabel>
+                  <FormControl>
+                    <Select
+                      onValueChange={field.onChange} // Use field.onChange for update
+                      defaultValue={field.value}
+                    >
+                      <SelectTrigger className=" bg-tertiary-100">
+                        <SelectValue placeholder="Select a Topic" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectGroup>
+                          <SelectItem value="Pre-Sales">Pre-Sales</SelectItem>
+                          <SelectItem value="General Question">
+                            General Question
+                          </SelectItem>
+                          <SelectItem value="Bug Report">Bug Report</SelectItem>
+                          <SelectItem value="Other">Other</SelectItem>
+                        </SelectGroup>
+                      </SelectContent>
+                    </Select>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        <FormField
-          control={form.control}
-          name="comments"
-          render={({ field }) => (
-            <FormItem className="mt-2">
-              <FormLabel>Comments*</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Any additional comments"
-                  className="home-section-p-1 bg-tertiary-100"
-                  rows={5}
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+            <FormField
+              control={form.control}
+              name="comments"
+              render={({ field }) => (
+                <FormItem className="mt-2">
+                  <FormLabel>Comments*</FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Any additional comments"
+                      className="home-section-p-1 bg-tertiary-100"
+                      rows={5}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-        <Button type="submit" className="mt-4 project-button w-1/2 md:w-1/3">
-          {loading ? (
-            <>
-              <Spinner aria-label="Info spinner example" className="me-2" />
-              Submitting...
-            </>
-          ) : (
-            "Submit"
-          )}
-        </Button>
-      </form>
-    </Form>
+            <Button
+              type="submit"
+              className="mt-4 project-button w-1/2 md:w-1/3"
+            >
+              {loading ? (
+                <>
+                  <Spinner aria-label="Info spinner example" className="me-2" />
+                  Submitting...
+                </>
+              ) : (
+                "Submit"
+              )}
+            </Button>
+          </form>
+        </Form>
+      )}
+    </>
   );
 };

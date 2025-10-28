@@ -94,11 +94,11 @@ export const ContactFormComponent: React.FC = () => {
             </CardContent>
           </Card>
         </div>
-        {formDisplay.active && formDisplay.type === "technical" && (
+        {/* {formDisplay.active && formDisplay.type === "technical" && (
           <div className={`animated-child w-2/3 mx-auto`}>
             <SupportTicketForm />
           </div>
-        )}
+        )} */}
         {formDisplay.active && formDisplay.type === "basic" && (
           <div className={`animated-child w-2/3 mx-auto`}>
             <BasicQuestionForm />
