@@ -11,7 +11,6 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
-import { SupportTicketForm } from "../forms/supportTicketForm";
 import { BasicQuestionForm } from "../forms/basicQuestionForm";
 
 export const ContactFormComponent: React.FC = () => {
@@ -26,22 +25,14 @@ export const ContactFormComponent: React.FC = () => {
     type: "",
   });
 
-  const getAnimatedClass = (delayClass = "") =>
-    `animated-child ${isInView ? "in-view" : ""} ${delayClass}`;
-
-  const recipient = "contactus@trevorstanner.com";
-  const subject = "A Simple Request";
-
   function sendEmail() {
     const recipient = "contactus@trevorstanner.com";
     const subject = "A Simple Request";
 
-    // Construct the mailto URL
     const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(
       subject
     )}`;
 
-    // Open the mailto link
     window.location.href = mailtoLink;
   }
 
@@ -94,11 +85,6 @@ export const ContactFormComponent: React.FC = () => {
             </CardContent>
           </Card>
         </div>
-        {/* {formDisplay.active && formDisplay.type === "technical" && (
-          <div className={`animated-child w-2/3 mx-auto`}>
-            <SupportTicketForm />
-          </div>
-        )} */}
         {formDisplay.active && formDisplay.type === "basic" && (
           <div className={`animated-child w-2/3 mx-auto`}>
             <BasicQuestionForm />

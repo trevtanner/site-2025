@@ -17,10 +17,8 @@ export const Contact: React.FC = () => {
   function sendEmail() {
     const recipient = "contactus@trevorstanner.com";
 
-    // Construct the mailto URL
     const mailtoLink = `mailto:${recipient}`;
 
-    // Open the mailto link
     window.location.href = mailtoLink;
   }
 
