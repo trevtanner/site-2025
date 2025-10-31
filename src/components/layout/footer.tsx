@@ -36,7 +36,10 @@ export function Footer() {
               </Link>
             </div>
             <div className="py-1">
-              <Link className="footer-link hover:text-secondary" href={"/contact"}>
+              <Link
+                className="footer-link hover:text-secondary"
+                href={"/contact"}
+              >
                 Contact
               </Link>
             </div>
@@ -98,10 +101,10 @@ export function Footer() {
           <Link href={"/privacy-policy"} className="pl-2 hover:text-white">
             Privacy Policy
           </Link>{" "}
-          |
+          {/* |
           <Link href={"/"} className="pl-2 hover:text-white">
             Accessibility
-          </Link>
+          </Link> */}
         </p>
       </div>
     </>

@@ -17,7 +17,7 @@ import { Button } from "../ui/button";
 export function Header() {
   const pathname = usePathname();
   return (
-    <NavigationMenu className="flex items-center justify-between px-8 py-4 bg-primary header nav-text">
+    <NavigationMenu className="flex items-center justify-between px-8 py-4 bg-primary header nav-text sticky top-0 z-50">
       <div className="w-15 hover:cursor-pointer">
         <Link href="/" legacyBehavior passHref>
           <img src="TTlogoBlkBG50.jpg" alt="Logo" />
