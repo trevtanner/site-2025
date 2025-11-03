@@ -60,6 +60,7 @@ export const ContactFormComponent: React.FC = () => {
                 className="mt-4 contact-button-2 hover:cursor-pointer hover:bg-tertiary-500"
                 size="sm"
                 onClick={() => setFormDisplay({ active: true, type: "basic" })}
+                aria-label="Open Contact Form button"
               >
                 Fill out a Form
               </Button>
@@ -79,6 +80,7 @@ export const ContactFormComponent: React.FC = () => {
                 className="mt-4 contact-button-1 hover:cursor-pointer"
                 size="sm"
                 onClick={sendEmail}
+                aria-label="Send Email Button"
               >
                 E-mail
               </Button>

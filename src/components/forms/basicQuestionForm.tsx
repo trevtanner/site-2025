@@ -225,6 +225,7 @@ export const BasicQuestionForm: React.FC = () => {
             <Button
               type="submit"
               className="mt-4 project-button w-1/2 md:w-1/3"
+              aria-label="Submit Form Button"
             >
               {loading ? (
                 <>

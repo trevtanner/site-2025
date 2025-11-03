@@ -4,15 +4,10 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "../ui/button";
 
 export function Header() {
   const pathname = usePathname();

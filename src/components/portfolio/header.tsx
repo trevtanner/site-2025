@@ -18,8 +18,16 @@ export default function Header() {
       </div>
       <div className="h-full text-center content-center animate-fade-in-up">
         <h1 className="hero-header-text">Portfolio</h1>
-        <Button className="mt-4 bg-primary portfolio-text" size="lg" asChild>
-          <Link href="mailto:contactus@trevorstanner.com">
+        <Button
+          className="mt-4 bg-primary portfolio-text"
+          size="lg"
+          asChild
+          aria-label="Send Email Button"
+        >
+          <Link
+            href="mailto:contactus@trevorstanner.com"
+            aria-label="Send Email Link"
+          >
             <MdSend className="" /> Get In Touch
           </Link>
         </Button>

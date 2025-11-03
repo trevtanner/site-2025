@@ -68,7 +68,7 @@ const About: React.FC = () => {
                 <AccordionContent className="home-section-p-1 px-4 pt-4">
                   {wdd.map((pkg, index) => (
                     <div key={index} className="pb-4">
-                      <h3 className="home-section-p-header">{pkg.title}</h3>
+                      <h4 className="home-section-p-header">{pkg.title}</h4>
                       <p>{pkg.about}</p>
                     </div>
                   ))}
@@ -81,7 +81,7 @@ const About: React.FC = () => {
                 <AccordionContent className="home-section-p-1 px-4 pt-4">
                   {seo.map((pkg, index) => (
                     <div key={index} className="pb-4">
-                      <h3 className="home-section-p-header">{pkg.title}</h3>
+                      <h4 className="home-section-p-header">{pkg.title}</h4>
                       <p>{pkg.about}</p>
                     </div>
                   ))}
@@ -95,7 +95,7 @@ const About: React.FC = () => {
                 <AccordionContent className="home-section-p-1 px-4 pt-4">
                   {topPackages.map((pkg, index) => (
                     <div key={index} className="pb-4">
-                      <h3 className="home-section-p-header">{pkg.title}</h3>
+                      <h4 className="home-section-p-header">{pkg.title}</h4>
                       <p>{pkg.about}</p>
                       <a href={pkg.link} className="hover:underline">
                         {pkg.link}

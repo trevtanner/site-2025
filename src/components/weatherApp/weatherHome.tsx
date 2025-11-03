@@ -159,7 +159,12 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
                   className="weather-temp placeholder:text-gray-400 md:w-2/3 bg-gray-400"
                 />
                 <div className="text-center">
-                  <Button size="icon" className="rounded-full bg-gray-800">
+                  <Button
+                    size="icon"
+                    className="rounded-full bg-gray-800"
+                    aria-label="Submit Input Button"
+                    type="submit"
+                  >
                     <BsSearch />
                   </Button>
                 </div>
@@ -172,6 +177,7 @@ export const WeatherHome: React.FC<WeatherHomeProps> = ({}) => {
             className="m-auto rounded-full bg-gray-800"
             onClick={requestLocation}
             disabled={isLoadingLocation || isLoadingData}
+            aria-label="Use Current Location Button"
           >
             {isLoadingLocation ? (
               "Getting Location..."

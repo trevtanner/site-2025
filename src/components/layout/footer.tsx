@@ -68,10 +68,18 @@ export function Footer() {
             </div>
 
             <div className="flex m-auto justify-center xl:justify-center gap-2 pt-2">
-              <Link href="https://github.com/trevtanner" target="_blank">
+              <Link
+                href="https://github.com/trevtanner"
+                target="_blank"
+                aria-label="trevtanner github link"
+              >
                 <FaGithub className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
               </Link>
-              <Link href="https://x.com/trevortannerdev" target="_blank">
+              <Link
+                href="https://x.com/trevortannerdev"
+                target="_blank"
+                aria-label="trevortannerdev X link"
+              >
                 <FaXTwitter className="h-6 w-6 my-auto hover:text-secondary cursor-pointer" />
               </Link>
               {/* <Link href="https://github.com/trevtanner">
@@ -80,6 +88,7 @@ export function Footer() {
               <Link
                 href="https://www.linkedin.com/in/trevorstanner/"
                 target="_blank"
+                aria-label="Trevor Tanner linkedin link"
               >
                 <FaLinkedin className="h-6 w-6 my-auto hover:text-secondary cursor-pointer " />
               </Link>
@@ -98,7 +107,11 @@ export function Footer() {
         <p className="text-center text-md m-auto">
           Trevor Tanner © {currentYear} Copyright TT Web Development and Design
           |
-          <Link href={"/privacy-policy"} className="pl-2 hover:text-white">
+          <Link
+            href={"/privacy-policy"}
+            className="pl-2 hover:text-white"
+            aria-label="Privacy Policy"
+          >
             Privacy Policy
           </Link>{" "}
           {/* |

@@ -52,6 +52,7 @@ export const Contact: React.FC = () => {
               className="mt-4 project-button"
               size="lg"
               onClick={sendEmail}
+              aria-label="Send Email Button"
             >
               <MdSend className="" /> Send an Email
             </Button>

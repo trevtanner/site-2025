@@ -308,6 +308,7 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
               }
             }}
             className="my-2 md:my-0"
+            aria-label="Previous Pokemon Button"
           >
             <ChevronLeft />#{" "}
             {pokemonData?.id === 1 ? "1025" : fixID(pokemonData?.id - 1)}
@@ -315,6 +316,7 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
           <Button
             onClick={() => router.push(`/pokedex`)}
             className="my-2 md:my-0"
+            aria-label="Back To Pokedex Page Button"
           >
             Back to Pokedex
           </Button>
@@ -327,6 +329,7 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
               }
             }}
             className="my-2 md:my-0"
+            aria-label="Next Pokemon Button"
           >
             # {pokemonData?.id === 1025 ? "0001" : fixID(pokemonData?.id + 1)}
             <ChevronRight />

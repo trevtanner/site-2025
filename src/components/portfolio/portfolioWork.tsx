@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/card";
 import { portfolioDetails } from "@/utils/siteData";
 import Link from "next/link";
-import { FaGripLines } from "react-icons/fa6";
 import { useInView } from "@/utils/useInView";
 
 export default function PortfolioWork() {
@@ -76,6 +75,7 @@ export default function PortfolioWork() {
                   size="sm"
                   className="portfolio-button hover:bg-primary"
                   key={index}
+                  aria-label="Non-Clickable Button"
                 >
                   {detail}
                 </Button>

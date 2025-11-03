@@ -38,8 +38,10 @@ export const Portfolio: React.FC = () => {
             receives my full attention, ensuring clean, efficient code and a
             seamless user experience.
           </p>
-          <Button className="project-button">
-            <Link href={"/portfolio"}>See My Work</Link>
+          <Button className="project-button" aria-label="Open Portfolio Button">
+            <Link href={"/portfolio"} aria-label="Portfolio Link">
+              See My Work
+            </Link>
           </Button>
         </div>
         <div>
@@ -60,12 +62,14 @@ export const Portfolio: React.FC = () => {
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         Website
                       </Button>
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         SEO
                       </Button>
@@ -86,12 +90,14 @@ export const Portfolio: React.FC = () => {
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         Website
                       </Button>
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         Dashboard
                       </Button>
@@ -110,18 +116,21 @@ export const Portfolio: React.FC = () => {
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         Website
                       </Button>
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         E-Com
                       </Button>
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         SEO
                       </Button>
@@ -142,12 +151,14 @@ export const Portfolio: React.FC = () => {
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         Website
                       </Button>
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         SEO
                       </Button>
@@ -166,6 +177,7 @@ export const Portfolio: React.FC = () => {
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         Web App
                       </Button>
@@ -184,6 +196,7 @@ export const Portfolio: React.FC = () => {
                       <Button
                         size="sm"
                         className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
                       >
                         Web App
                       </Button>
