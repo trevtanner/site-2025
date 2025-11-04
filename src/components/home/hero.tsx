@@ -37,10 +37,10 @@ export default function Hero() {
               Trevor Tanner
             </h1>
             <p className="hero-sub-text animate-fade-in-up delay-600">
-              Full Stack Developer
+              Full-Stack Developer
             </p>
             <p className="hero-sub-text-2 animate-fade-in-up delay-800">
-              Building stellar websites // One line at a time
+              High-Performance Next.js Solutions to Drive Your Business Forward
             </p>
           </div>
         </div>
@@ -63,10 +63,10 @@ export default function Hero() {
             Trevor Tanner
           </h1>
           <p className="hero-sub-text animate-fade-in-up delay-600">
-            Full Stack Developer
+            Full-Stack Developer
           </p>
           <p className="hero-sub-text-2 animate-fade-in-up delay-800">
-            Building stellar websites // One line at a time
+            High-Performance Next.js Solutions to Drive Your Business Forward
           </p>
         </div>
       </div>

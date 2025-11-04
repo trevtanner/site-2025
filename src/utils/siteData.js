@@ -1,3 +1,10 @@
+import {
+  SiShadcnui,
+  SiPrisma,
+  SiNextdotjs,
+  SiTypescript,
+} from "react-icons/si";
+
 export const personalInfo = {
   name: "Trevor Tanner",
   location: "Orange County, CA",
@@ -15,18 +22,28 @@ export const topPackages = [
     about:
       "React framework for building full-stack web applications, provides many services out of the box to enable faster development and time from idea to product.",
     link: "https://nextjs.org/",
+    logo: <SiNextdotjs className="h-6 w-6 m-auto" />,
   },
   {
     title: "Prisma - Database ORM",
     about:
       "A next-generation ORM (Object-Relational Mapping) for Node.js and TypeScript that provides a powerful and type-safe database toolkit, allowing developers to focus on building scalable and efficient applications.",
     link: "https://www.prisma.io/",
+    logo: <SiPrisma className="h-6 w-6 m-auto" />,
   },
   {
     title: "Shadcn - Styling",
     about:
       "A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.",
     link: "https://ui.shadcn.com/",
+    logo: <SiShadcnui className="h-6 w-6 m-auto" />,
+  },
+  {
+    title: "Typescript - Language",
+    about:
+      "A strongly typed programming language that builds on JavaScript, giving better tooling at any scale.",
+    link: "https://www.typescriptlang.org/",
+    logo: <SiTypescript className="h-6 w-6 m-auto" />,
   },
 ];
 

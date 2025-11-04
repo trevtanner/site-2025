@@ -90,12 +90,15 @@ const About: React.FC = () => {
 
               <AccordionItem value="item-tools">
                 <AccordionTrigger className="home-section-subheader-2">
-                  My Tools
+                  Tech Stack
                 </AccordionTrigger>
                 <AccordionContent className="home-section-p-1 px-4 pt-4">
                   {topPackages.map((pkg, index) => (
                     <div key={index} className="pb-4">
-                      <h4 className="home-section-p-header">{pkg.title}</h4>
+                      <div className="flex gap-4">
+                        <div>{pkg.logo}</div>
+                        <h4 className="home-section-p-header">{pkg.title}</h4>
+                      </div>
                       <p>{pkg.about}</p>
                       <a href={pkg.link} className="hover:underline">
                         {pkg.link}
