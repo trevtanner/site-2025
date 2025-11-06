@@ -35,10 +35,13 @@ const formSchema = z.object({
     .min(2, { message: "Name is required." })
     .max(50, { message: "Name is too long." }),
   email: z.email({ message: "Email is required." }),
-  topic: z.string().max(50, { message: "Topic selection is required." }),
+  topic: z.string().min(50, { message: "Topic selection is required." }),
   company: z.string().max(50),
   website: z.string().max(50),
-  comments: z.string().max(1000, { message: "A comment is required." }),
+  comments: z
+    .string()
+    .min(10, { message: "A comment is required." })
+    .max(10000, { message: "Comment is too long." }),
 });
 
 export const ContactForm: React.FC = () => {

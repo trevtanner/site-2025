@@ -89,6 +89,7 @@ export const portfolioDetails = [
     url: "/",
     target: "",
     image: "/tst-project.jpg",
+    slugName: "TTWebDevelopmentAndDesign",
   },
   {
     name: "Fusion of Ideas HQ",
@@ -97,6 +98,7 @@ export const portfolioDetails = [
     url: "",
     target: "",
     image: "/FoIHQ.png",
+    slugName: "FusionOfIdeasHQ",
   },
   {
     name: "Tama Lacrosse",
@@ -105,6 +107,7 @@ export const portfolioDetails = [
     url: "https://www.tamalax.com",
     target: "_blank",
     image: "/TamaSite.png",
+    slugName: "TamaLacrosse",
   },
   {
     name: "Dasher Sports Apparel",
@@ -113,6 +116,7 @@ export const portfolioDetails = [
     url: "https://dasher-website.vercel.app",
     target: "_blank",
     image: "/dasherApparel.png",
+    slugName: "DasherSportsApparel",
   },
   {
     name: "TT Pokedex",
@@ -121,6 +125,7 @@ export const portfolioDetails = [
     url: "/pokedex",
     target: "",
     image: "/TTPokedex.png",
+    slugName: "TTPokedex",
   },
   {
     name: "T-Cast",
@@ -129,5 +134,62 @@ export const portfolioDetails = [
     url: "/weatherApp",
     target: "",
     image: "/tCast.png",
+    slugName: "TCast",
+  },
+];
+export const projectDetails = [
+  {
+    name: "TT Web Development & Design",
+    description: "",
+    details: ["Website", "SEO"],
+    url: "/",
+    target: "",
+    image: "/tst-project.jpg",
+    slugName: "TTWebDevelopmentAndDesign",
+  },
+  {
+    name: "TT Web Development & Design",
+    description: "",
+    details: ["Website", "SEO"],
+    url: "/",
+    target: "",
+    image: "/tst-project.jpg",
+    slugName: "TTWebDevelopmentAndDesign",
+  },
+  {
+    name: "TT Web Development & Design",
+    description: "",
+    details: ["Website", "SEO"],
+    url: "/",
+    target: "",
+    image: "/tst-project.jpg",
+    slugName: "TTWebDevelopmentAndDesign",
+  },
+  {
+    name: "TT Web Development & Design",
+    description: "",
+    details: ["Website", "SEO"],
+    url: "/",
+    target: "",
+    image: "/tst-project.jpg",
+    slugName: "TTWebDevelopmentAndDesign",
+  },
+  {
+    name: "TT Web Development & Design",
+    description: "",
+    details: ["Website", "SEO"],
+    url: "/",
+    target: "",
+    image: "/tst-project.jpg",
+    slugName: "TTWebDevelopmentAndDesign",
+  },
+  {
+    name: "TT Web Development & Design",
+    description: "",
+    details: ["Website", "SEO"],
+    url: "/",
+    target: "",
+    image: "/tst-project.jpg",
+    slugName: "TTWebDevelopmentAndDesign",
   },
 ];

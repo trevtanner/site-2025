@@ -12,7 +12,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export const PokedexEntrySkeleton: React.FC = () => {
   return (
-    <div className="m-auto w-3/4 pt-8 pb-24">
+    <div className="m-auto w-3/4 pt-8 pb-24 bg-tertiary-300">
       <div className="m-auto w-1/2">
         <Card className="mt-4">
           <CardHeader>

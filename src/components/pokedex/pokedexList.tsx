@@ -62,7 +62,7 @@ export const PokedexList: React.FC<PokedexListProps> = ({
   const [selectedGen, setSelectedGen] = useState(gen1);
   const [selectedGenString, setSelectedGenString] = useState("gen1");
   return (
-    <div className="bg-tertiary-100 py-6">
+    <div className="bg-tertiary-300 py-6">
       <h1 className="text-center text-5xl underline">Pokedex</h1>
       <div className="md:px-24 grid grid-cols-1 md:grid-cols-6 pt-4 m-auto">
         <div className="col-span-1 md:col-start-2">

@@ -45,6 +45,9 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
     }
     if (name === "urshifu-single-strike") {
       return (name = "Urshifu");
+    }
+    if (name === "wormadam-plant") {
+      return (name = "Wormadam");
     } else {
       return name.charAt(0).toUpperCase() + name.slice(1);
     }
@@ -252,7 +255,7 @@ export const PokedexEntry: React.FC<PokedexListItemProps> = ({
   }
 
   return (
-    <div className="m-auto md:w-3/4 pt-8 pb-24">
+    <div className="m-auto md:w-3/4 pt-8 pb-24 ">
       <div className="m-auto w-1/2">
         <Card className="mt-4">
           <CardHeader>

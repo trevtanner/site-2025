@@ -89,11 +89,107 @@ export const PokedexListItem: React.FC<PokedexListItemProps> = ({
     if (name === "mr-mime") {
       return (name = "Mr. Mime");
     }
+    if (name === "mr-rime") {
+      return (name = "Mr. Rime");
+    }
     if (name === "farfetchd") {
       return (name = "Farfetch'd");
     }
     if (name === "deoxys-normal") {
       return (name = "Deoxys");
+    }
+    if (name === "urshifu-single-strike") {
+      return (name = "Urshifu");
+    }
+    if (name === "wormadam-plant") {
+      return (name = "Wormadam");
+    }
+    if (name === "mime-jr") {
+      return (name = "Mime Jr");
+    }
+    if (name === "giratina-altered") {
+      return (name = "Giratina");
+    }
+    if (name === "shaymin-land") {
+      return (name = "Shaymin");
+    }
+    if (name === "basculin-red-striped") {
+      return (name = "Basculin");
+    }
+    if (name === "darmanitan-standard") {
+      return (name = "Darmanitan");
+    }
+    if (name === "tornadus-incarnate") {
+      return (name = "Tornadus");
+    }
+    if (name === "thundurus-incarnate") {
+      return (name = "Thundurus");
+    }
+    if (name === "landorus-incarnate") {
+      return (name = "Landorus");
+    }
+    if (name === "keldeo-ordinary") {
+      return (name = "Keldeo");
+    }
+    if (name === "meloetta-aria") {
+      return (name = "Meloetta");
+    }
+    if (name === "meowstic-male") {
+      return (name = "Meowstic");
+    }
+    if (name === "aegislash-shield") {
+      return (name = "Aegislash");
+    }
+    if (name === "pumpkaboo-average") {
+      return (name = "Pumpkaboo");
+    }
+    if (name === "gourgeist-average") {
+      return (name = "Gourgeist");
+    }
+    if (name === "zygarde-50") {
+      return (name = "Zygarde");
+    }
+    if (name === "lycanroc-midday") {
+      return (name = "Lycanroc");
+    }
+    if (name === "wishiwashi-solo") {
+      return (name = "Wishiwashi");
+    }
+    if (name === "minior-red-meteor") {
+      return (name = "Minior");
+    }
+    if (name === "mimikyu-disguised") {
+      return (name = "Mimikyu");
+    }
+    if (name === "tapu-koko") {
+      return (name = "Tapu Koko");
+    }
+    if (name === "tapu-lele") {
+      return (name = "Tapu Lele");
+    }
+    if (name === "tapu-bulu") {
+      return (name = "Tapu Bulu");
+    }
+    if (name === "tapu-fini") {
+      return (name = "Tapu Fini");
+    }
+    if (name === "toxtricity-amped") {
+      return (name = "Toxtricity");
+    }
+    if (name === "eiscue-ice") {
+      return (name = "Eiscue");
+    }
+    if (name === "indeedee-male") {
+      return (name = "Indeedee");
+    }
+    if (name === "morpeko-full-belly") {
+      return (name = "Morpeko");
+    }
+    if (name === "basculegion-male") {
+      return (name = "Basculegion");
+    }
+    if (name === "enamorus-incarnate") {
+      return (name = "Enamorus");
     } else {
       return name.charAt(0).toUpperCase() + name.slice(1);
     }
@@ -101,7 +197,7 @@ export const PokedexListItem: React.FC<PokedexListItemProps> = ({
 
   return (
     <TableRow
-      className="cursor-pointer hover:bg-tertiary-300"
+      className="cursor-pointer hover:bg-tertiary-500"
       onClick={() => router.push(`/pokedex/${slugNumber(dexIndex)}`)}
     >
       <TableCell>

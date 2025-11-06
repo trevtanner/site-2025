@@ -15,7 +15,7 @@ export default async function Page({
   const pokedexData = await api.getPokemonSpeciesById(slug);
 
   return (
-    <div className="min-h-[75vh]">
+    <div className="min-h-[75vh] bg-tertiary-300">
       <PokedexEntry
         slug={slug}
         pokemonData={pokemonData}
