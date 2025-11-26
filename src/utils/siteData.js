@@ -115,7 +115,7 @@ export const portfolioDetails = [
     details: ["Website", "SEO"],
     url: "https://dasher-apparel.com",
     target: "_blank",
-    image: "/DasherApparel.png",
+    image: "/dasherApparel.png",
     slugName: "DasherSportsApparel",
   },
   {
