@@ -113,9 +113,9 @@ export const portfolioDetails = [
     name: "Dasher Sports Apparel",
     description: "",
     details: ["Website", "SEO"],
-    url: "https://dasher-website.vercel.app",
+    url: "https://dasher-apparel.com",
     target: "_blank",
-    image: "/dasherApparel.png",
+    image: "/DasherApparel.png",
     slugName: "DasherSportsApparel",
   },
   {
