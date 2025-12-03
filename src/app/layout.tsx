@@ -10,6 +10,7 @@ import {
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics gaId="G-KL7C8SC46Y" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${pokemon.variable} antialiased container`}
       >

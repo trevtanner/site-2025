@@ -23,7 +23,7 @@ export function ProjectsHeader() {
       </div>
       <NavigationMenuList className="!flex-none">
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/" passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Exit
             </NavigationMenuLink>
