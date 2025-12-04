@@ -4,6 +4,7 @@ import Image from "next/image";
 import tstImage from "@/public/tst-project.jpg";
 import tamaSite from "@/public/TamaSite.png";
 import dasherSite from "@/public/dasherApparel.png";
+import northSpringsLax from "@/public/northSpringsLax.png";
 import pokeball from "@/public/TTPokedex.png";
 import weather from "@/public/tCast.png";
 import FoI from "@/public/FoIHQ.png";
@@ -161,6 +162,34 @@ export const Portfolio: React.FC = () => {
                         aria-label="Non-clickable Button"
                       >
                         SEO
+                      </Button>
+                    </div>
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/3">
+                  <Image
+                    src={northSpringsLax}
+                    alt="image of code"
+                    className="w-full brightness-80 hover:opacity-70 transition duration-300 ease-in-out"
+                  />
+                  <div className="w-3/4">
+                    <p className="home-section-subheader py-2">
+                      North Springs Lacrosse
+                    </p>
+                    <div className="flex gap-2">
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
+                      >
+                        Landing Page
+                      </Button>
+                      <Button
+                        size="sm"
+                        className="project-button hover:bg-primary"
+                        aria-label="Non-clickable Button"
+                      >
+                        Blog
                       </Button>
                     </div>
                   </div>
